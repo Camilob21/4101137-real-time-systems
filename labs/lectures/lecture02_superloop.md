@@ -1,11 +1,14 @@
 # Week-2 talk — The vocabulary: taxonomy, task models, latency anatomy (40 min)
 
-**Precedes:** `labs/lab02_superloop.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab02_superloop.md](../lab02_superloop.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. classify a task as hard/firm/soft by the
-*consequence of a miss*; 2. name each component of the interrupt→response chain and
-where jitter comes from; 3. write a measurable timing requirement in EARS form with an ID.
+By the end, the student can:
+
+1. classify a task as hard/firm/soft by the *consequence of a miss*.
+2. name each component of the interrupt→response chain and where jitter comes from.
+3. write a measurable timing requirement in EARS form with an ID.
 
 ## Structure
 | Min | Segment | Purpose in one line |

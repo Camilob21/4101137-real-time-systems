@@ -1,6 +1,7 @@
 # RET — Timing Evidence Report
 
-**Team:** `<names>` · **Boards:** `<serials/nicknames>`
+- **Team:** `<names>`
+- **Boards:** `<serials/nicknames>`
 
 **Living document** — updated every week; handed in at the workshop (week 8) and
 at the close (week 16).

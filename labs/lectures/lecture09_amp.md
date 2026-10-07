@@ -1,13 +1,16 @@
 # Week-9 talk — FreeRTOS, multicore, and WCET (40 min)
 
-**Precedes:** `labs/lab09_amp.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab09_amp.md](../lab09_amp.md)
+- **Audience:** students right before the lab.
+
 This is FreeRTOS's dedicated session — the weekly aside becomes the headline.
 
 ## Objectives
-By the end, the student can: 1. map the course's Zephyr APIs to FreeRTOS and argue
-when each kernel is the right call; 2. distinguish global from partitioned
-multicore scheduling and predict which helps the *tail*; 3. choose and defend a
-WCET estimation method.
+By the end, the student can:
+
+1. map the course's Zephyr APIs to FreeRTOS and argue when each kernel is the right call.
+2. distinguish global from partitioned multicore scheduling and predict which helps the *tail*.
+3. choose and defend a WCET estimation method.
 
 ## Structure
 | Min | Segment | Purpose in one line |

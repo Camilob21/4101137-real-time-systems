@@ -1,10 +1,9 @@
 /*
- * Real pressure input, opt-in:
- *   west build ... -- -DEXTRA_DTC_OVERLAY_FILE=pot.overlay
+ * Real pressure input on the ESP32-C6-DevKitC, opt-in:
+ *   west build ... -- -DEXTRA_DTC_OVERLAY_FILE=pot_esp32c6.overlay
  *
- * Wire the pot wiper to ADC1 channel 1 (ESP32-C6: GPIO1 · ESP32-S3: GPIO2),
- * the ends to 3V3 and GND. Channel 0 is the joystick input the C0116-DK has on
- * board; on the ESP32 devkits tie its pin (C6 GPIO0 · S3 GPIO1) to 3V3.
+ * Pot wiper to GPIO1 (ADC1 channel 1), ends to 3V3 and GND. Channel 0 (GPIO0) is
+ * the joystick input the C0116-DK has on board; tie GPIO0 to 3V3 here.
  */
 
 #include <zephyr/dt-bindings/adc/adc.h>

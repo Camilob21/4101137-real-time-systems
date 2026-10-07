@@ -1,9 +1,14 @@
 # Week-N talk — `<title>` (40 min)
 
-**Precedes:** `labs/labNN_*.md` · **Audience:** students right before the lab.
+- **Precedes:** [`labNN_<slug>.md`](../labNN_<slug>.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. <measurable verb> … 2. … 3. …
+By the end, the student can:
+
+1. <measurable verb> …
+2. …
+3. …
 
 ## Structure
 | Min | Segment | Purpose in one line |

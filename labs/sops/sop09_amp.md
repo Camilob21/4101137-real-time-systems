@@ -1,6 +1,8 @@
 # SOP-09 — Two images on the two cores (sysbuild / AMP)
 
-**Serves:** `labs/lab09_amp.md` · **Hardware:** ESP32-S3 DevKitC + logic analyzer.
+- **Serves:** [lab09_amp.md](../lab09_amp.md)
+- **Hardware:** ESP32-S3 DevKitC + logic analyzer.
+
 Steps, checks, and troubleshooting only — the *why* lives in the lab.
 
 > **Draft** — commands pending validation on course hardware.

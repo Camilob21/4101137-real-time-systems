@@ -1,5 +1,7 @@
 # Week 5 — Tracing: seeing what the analyzer can't
-> **Tech guide:** [SOP-05](sops/sop05_tracing.md) · **Reading:** [READINGS.md](../READINGS.md), week 5 · **Module:** 4
+> - **Tech guide:** [SOP-05](sops/sop05_tracing.md)
+> - **Reading:** [READINGS.md](../READINGS.md), week 5
+> - **Module:** 4
 
 **From:** Eng. Samuel Cifuentes — *"The logic analyzer sees pins; I need to see the
 **scheduler**: who ran, when, why, and who waited. Next week we start

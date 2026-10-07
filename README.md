@@ -65,7 +65,7 @@ spec and verified in the traces. All course material is in English; classroom de
 | Path | What it is |
 |---|---|
 | [labs/](labs/) | One lab guide per session, plus `lectures/` (instructor scripts) and `sops/` (bring-up mechanics) — format in [SESSION_FORMAT.md](SESSION_FORMAT.md) |
-| [firmware/](firmware/) | **Course-authored reference apps.** `superloop/` is the get-started: students run it in week 2, it gets explained in the talk, and module 2 is its guided migration to kernel threads. More stages land as the semester climbs |
+| [firmware/](firmware/) | **Course-authored reference apps.** `superloop/` is the get-started: students run it in week 2, it gets explained in the talk, and module 2 is its guided migration to kernel threads. `sampling_thread/` is the week-3 reference (S3 overlay + first thread), `kernel/` the week-4 one (full migration). More stages land as the semester climbs |
 | [templates/](templates/) | lab / lecture / SOP / RET templates |
 | [PROJECT_SCENARIO.md](PROJECT_SCENARIO.md) · [READINGS.md](READINGS.md) · [BOM.md](BOM.md) | The GreenField briefing, the per-week reading guide, and the parts list |
 

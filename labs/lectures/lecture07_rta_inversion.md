@@ -1,11 +1,14 @@
 # Week-7 talk — Response-time analysis and priority inversion (40 min)
 
-**Precedes:** `labs/lab07_rta_inversion.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab07_rta_inversion.md](../lab07_rta_inversion.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. run the RTA recurrence by hand for a small set;
-2. narrate the priority-inversion sequence and why priorities alone don't prevent
-it; 3. state the PIP fix and bound B_i.
+By the end, the student can:
+
+1. run the RTA recurrence by hand for a small set.
+2. narrate the priority-inversion sequence and why priorities alone don't prevent it.
+3. state the PIP fix and bound B_i.
 
 ## Structure
 | Min | Segment | Purpose in one line |

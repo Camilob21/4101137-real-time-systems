@@ -35,22 +35,26 @@ the `USB` jack beside it.
 ```bash
 west build -p -b stm32c0116_dk                  firmware/superloop && west flash
 west build -p -b nucleo_l476rg                  firmware/superloop && west flash
-west build -p -b esp32s3_devkitc/esp32s3/procpu firmware/superloop && west flash
+west build -p -b esp32s3_devkitc/esp32s3/procpu firmware/superloop && west flash   # after week 3's Task A
 west build -p -b esp32c6_devkitc/esp32c6/hpcore firmware/superloop && west flash
 west build -p -b native_sim                     firmware/superloop && ./build/zephyr/zephyr.exe
 ```
 
 `native_sim` is for development only — no pins wired, and its timing is not real.
+Simulated time only advances when the CPU idles, and this loop never does: the
+banner and one telemetry line print, then time stands still. Use it to check
+that the code compiles, not that it runs.
 
 ## The plant
 
 Pressure comes from a synthetic plant (it drifts toward whatever the valve
 commands), which is what weeks 2–4 measure against. To read a real pot instead,
-wire the wiper to the pot channel (S3 GPIO2 · C6 GPIO1 · Nucleo A0), the ends to
+wire the wiper to the pot channel (S3 GPIO9 · C6 GPIO1 · Nucleo A0), the ends to
 3V3 and GND, and build with the fragment for your board:
 
 ```bash
-west build ... -- -DEXTRA_DTC_OVERLAY_FILE=pot_esp32.overlay
+west build ... -- -DEXTRA_DTC_OVERLAY_FILE=pot_esp32s3.overlay
+west build ... -- -DEXTRA_DTC_OVERLAY_FILE=pot_esp32c6.overlay
 west build ... -- -DEXTRA_DTC_OVERLAY_FILE=pot_nucleo.overlay
 ```
 
@@ -67,7 +71,7 @@ The C0116-DK reads its on-board joystick and the pot without the fragment.
 ## Display (optional HMI)
 
 SSD1306 128×64 OLED on I²C. Default pins: Nucleo SDA PB9 / SCL PB8 (D14/D15),
-S3 SDA GPIO8 / SCL GPIO9, C6 SDA GPIO6 / SCL GPIO7. On the C0116-DK the font
+S3 SDA GPIO1 / SCL GPIO2, C6 SDA GPIO6 / SCL GPIO7 — the boards' own `i2c0` pins. On the C0116-DK the font
 tables overflow the 32 KB flash, so the HMI needs one of the larger boards.
 Three pages — dashboard / flow / health. Build with the fragment:
 
@@ -93,6 +97,8 @@ in ticks, measured by the firmware itself.
 
 ## Week 3
 
-The port is one file: `boards/<board>.overlay`. Pins and ADC channels move, the C
-does not. Every piece here (ISR flags, polled work, batch bottom halves) has a
-named counterpart in module 2's migration — that mapping is the week-3/4 talks.
+The port is one file: `boards/<board>.overlay`. Students write the S3 one from the
+pin table above in week 3's Task A; the pins and ADC channels move, the C does
+not. Every piece here (ISR flags, polled work, batch bottom halves) has a named
+counterpart in module 2's migration — that mapping is the week-3/4 talks. The
+week-3 result, with its S3 overlay, is [../sampling_thread/](../sampling_thread/).

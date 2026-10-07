@@ -1,6 +1,7 @@
 # Week 1 — Bring-up: the team, the board, the toolchain
-> **Reading:** [READINGS.md](../READINGS.md), week 1 · **Module:** 0
-> **Prerequisite:** [setup.md](setup.md) done at home.
+> - **Reading:** [READINGS.md](../READINGS.md), week 1
+> - **Module:** 0
+> - **Prerequisite:** [setup.md](setup.md) done at home.
 
 **From:** Eng. Samuel Cifuentes (Senior Architect) — *"Welcome to the Control
 Systems team. SoilSense already measures; now it has to **act**, and a valve that

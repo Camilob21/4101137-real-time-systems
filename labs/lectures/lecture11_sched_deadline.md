@@ -1,12 +1,14 @@
 # Week-11 talk — Servers, reservation, CBS → SCHED_DEADLINE (40 min)
 
-**Precedes:** `labs/lab11_sched_deadline.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab11_sched_deadline.md](../lab11_sched_deadline.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. explain why fixed priorities fail once third-party
-software shares the CPU; 2. state the CBS in its three rules and its isolation
-guarantee U_s = Q_s/T_s; 3. translate a measured loop into a `SCHED_DEADLINE`
-runtime/period contract with margin.
+By the end, the student can:
+
+1. explain why fixed priorities fail once third-party software shares the CPU.
+2. state the CBS in its three rules and its isolation guarantee U_s = Q_s/T_s.
+3. translate a measured loop into a `SCHED_DEADLINE` runtime/period contract with margin.
 
 ## Structure
 | Min | Segment | Purpose in one line |

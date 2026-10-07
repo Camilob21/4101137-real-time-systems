@@ -1,11 +1,14 @@
 # Week-6 talk — Schedulability: utilization bounds, RM/DM, EDF (40 min)
 
-**Precedes:** `labs/lab06_schedulability.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab06_schedulability.md](../lab06_schedulability.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. compute U and apply the Liu & Layland and
-hyperbolic tests; 2. explain why RM can miss below U = 1 while EDF meets exactly up
-to U = 1; 3. connect scheduling jitter to control-loop degradation.
+By the end, the student can:
+
+1. compute U and apply the Liu & Layland and hyperbolic tests.
+2. explain why RM can miss below U = 1 while EDF meets exactly up to U = 1.
+3. connect scheduling jitter to control-loop degradation.
 
 ## Structure
 | Min | Segment | Purpose in one line |

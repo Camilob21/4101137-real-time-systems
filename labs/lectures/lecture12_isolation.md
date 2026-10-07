@@ -1,12 +1,14 @@
 # Week-12 talk — Linux RT in practice: affinity, isolation, mixed loads (40 min)
 
-**Precedes:** `labs/lab12_isolation.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab12_isolation.md](../lab12_isolation.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. name the interference channels a DEADLINE contract
-does *not* close; 2. compose the layered isolation recipe (contract + affinity +
-isolcpus + IRQ steering) and say what each layer removes; 3. write a deployment
-configuration another team can replicate.
+By the end, the student can:
+
+1. name the interference channels a DEADLINE contract does *not* close.
+2. compose the layered isolation recipe (contract + affinity + isolcpus + IRQ steering) and say what each layer removes.
+3. write a deployment configuration another team can replicate.
 
 ## Structure
 | Min | Segment | Purpose in one line |

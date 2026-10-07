@@ -1,6 +1,8 @@
 # Week 9 — A devicetree driver and the two cores (AMP)
-> **Tech guide:** [SOP-09](sops/sop09_amp.md) · **Reading:** [READINGS.md](../READINGS.md), week 9 · **Module:** 4
-> **Due today:** Problem Set 2.
+> - **Tech guide:** [SOP-09](sops/sop09_amp.md)
+> - **Reading:** [READINGS.md](../READINGS.md), week 9
+> - **Module:** 4
+> - **Due today:** Problem Set 2.
 
 **From:** Eng. Samuel Cifuentes — *"Two assignments. One: the flow sensor deserves
 a real driver, with its binding — not a loose `gpio_get` in the app. Two: the S3

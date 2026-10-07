@@ -7,7 +7,7 @@
  * console UART (16/17) and the SPI flash (24-30).
  *
  * Pressure comes from the synthetic plant until the pot is wired: build with
- * -DEXTRA_DTC_OVERLAY_FILE=pot_esp32.overlay to read it from ADC1 instead.
+ * -DEXTRA_DTC_OVERLAY_FILE=pot_esp32c6.overlay to read it from ADC1 instead.
  */
 
 #include <zephyr/dt-bindings/gpio/gpio.h>

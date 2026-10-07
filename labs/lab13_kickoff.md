@@ -1,6 +1,7 @@
 # Week 13 — SoilSense Hub kickoff
-> **Reading:** [READINGS.md](../READINGS.md), week 13 · **Module:** 6
-> Also covers the checkpoints (wks 14–15) and demo day (wk 16).
+> - **Reading:** [READINGS.md](../READINGS.md), week 13
+> - **Module:** 6
+> - Also covers the checkpoints (wks 14–15) and demo day (wk 16).
 
 **From:** Eng. Samuel Cifuentes — *"The project starts. The Hub is one box with
 three personalities: it controls the pumps (hard), serves a human (GUI), and moves

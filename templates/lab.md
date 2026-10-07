@@ -1,6 +1,7 @@
 # Week N — <Session title>
-> **Tech guide:** [SOP-NN](sop.md) *(delete this line if the session has no SOP)*
-> **Reading:** [READINGS.md](../READINGS.md), week N · **Module:** M
+> - **Tech guide:** [SOP-NN](sop.md) *(delete this line if the session has no SOP)*
+> - **Reading:** [READINGS.md](../READINGS.md), week N
+> - **Module:** M
 
 **From:** `<Stakeholder>` (`<role>`) — *"<The problem, in one or two sentences from the project.>"*
 

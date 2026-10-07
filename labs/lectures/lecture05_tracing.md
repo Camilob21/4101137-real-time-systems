@@ -1,11 +1,14 @@
 # Week-5 talk — Instrumented measurement: tracing (40 min)
 
-**Precedes:** `labs/lab05_tracing.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab05_tracing.md](../lab05_tracing.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. explain what a scheduler trace shows that GPIO
-can't; 2. describe the tracing pipeline (events → transport → viewer); 3. design a
-measurement that accounts for its own overhead.
+By the end, the student can:
+
+1. explain what a scheduler trace shows that GPIO can't.
+2. describe the tracing pipeline (events → transport → viewer).
+3. design a measurement that accounts for its own overhead.
 
 ## Structure
 | Min | Segment | Purpose in one line |

@@ -1,12 +1,14 @@
 # Week-13 talk — Mixed criticality, partitioning, and safety (40 min)
 
-**Precedes:** `labs/lab13_kickoff.md` · **Audience:** students right before the kickoff.
+- **Precedes:** [lab13_kickoff.md](../lab13_kickoff.md)
+- **Audience:** students right before the kickoff.
 
 ## Objectives
-By the end, the student can: 1. define a mixed-criticality system and argue a
-Linux-vs-MCU partition with measured tails; 2. specify a safe state and a watchdog
-chain (who kicks, who bites, what a bite does); 3. state what IEC 61508 and
-DO-178C regulate, in one sentence each.
+By the end, the student can:
+
+1. define a mixed-criticality system and argue a Linux-vs-MCU partition with measured tails.
+2. specify a safe state and a watchdog chain (who kicks, who bites, what a bite does).
+3. state what IEC 61508 and DO-178C regulate, in one sentence each.
 
 ## Structure
 | Min | Segment | Purpose in one line |

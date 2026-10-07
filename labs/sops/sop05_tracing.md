@@ -1,7 +1,8 @@
 # SOP-05 — Zephyr tracing on the node (SystemView / CTF)
 
-**Serves:** `labs/lab05_tracing.md` · **Hardware:** ESP32-S3 DevKitC; Route A needs
-a SEGGER J-Link probe, Route B needs only the USB cable + a spare UART.
+- **Serves:** [lab05_tracing.md](../lab05_tracing.md)
+- **Hardware:** ESP32-S3 DevKitC; Route A needs a SEGGER J-Link probe, Route B needs only the USB cable + a spare UART.
+
 Steps, checks, and troubleshooting only — the *why* lives in the lab.
 
 > **Draft** — commands pending validation on course hardware.

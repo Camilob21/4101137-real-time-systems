@@ -1,6 +1,8 @@
 # SOP-NN — `<procedure>`
 
-**Serves:** `labs/labNN_*.md` · **Hardware:** <exact boards/cables>.
+- **Serves:** [`labNN_<slug>.md`](../labNN_<slug>.md)
+- **Hardware:** <exact boards/cables>.
+
 Steps, checks, and troubleshooting only — the *why* lives in the lab.
 
 ## 1. `<step>`

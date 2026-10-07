@@ -1,6 +1,7 @@
 # Week 7 — RTA and priority inversion
-> **Reading:** [READINGS.md](../READINGS.md), week 7 · **Module:** 3
-> **Problem Set 2 goes out today** (exercises from ch. 7 + RTA; due week 9).
+> - **Reading:** [READINGS.md](../READINGS.md), week 7
+> - **Module:** 3
+> - **Problem Set 2 goes out today** (exercises from ch. 7 + RTA; due week 9).
 
 **From:** Eng. Samuel Cifuentes — *"The utilization test tells me whether the set
 fits; it doesn't tell me **how long each task takes in the worst case** — and the

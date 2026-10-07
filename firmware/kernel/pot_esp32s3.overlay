@@ -1,0 +1,38 @@
+/*
+ * Real pressure input on the ESP32-S3-DevKitC, opt-in:
+ *   west build ... -- -DEXTRA_DTC_OVERLAY_FILE=pot_esp32s3.overlay
+ *
+ * Pot wiper to GPIO9 (ADC1 channel 8), ends to 3V3 and GND. Channel 7 (GPIO8) is
+ * the joystick input the C0116-DK has on board; tie GPIO8 to 3V3 here. GPIO1/2
+ * (channels 0/1) stay free for the board's i2c0.
+ */
+
+#include <zephyr/dt-bindings/adc/adc.h>
+
+/ {
+	zephyr,user {
+		io-channels = <&adc0 7>, <&adc0 8>;
+	};
+};
+
+&adc0 {
+	status = "okay";
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	channel@7 {
+		reg = <7>;
+		zephyr,gain = "ADC_GAIN_1_4";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+	};
+
+	channel@8 {
+		reg = <8>;
+		zephyr,gain = "ADC_GAIN_1_4";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+	};
+};

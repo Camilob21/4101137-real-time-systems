@@ -1,5 +1,6 @@
 # Week 11 — Periodic tasks in Linux: from CBS to SCHED_DEADLINE
-> **Reading:** [READINGS.md](../READINGS.md), week 11 · **Module:** 5
+> - **Reading:** [READINGS.md](../READINGS.md), week 11
+> - **Module:** 5
 
 **From:** Eng. Samuel Cifuentes — *"On the MCU, priorities were enough because we
 controlled every line of code. On the Hub we don't: the GUI and the routing are

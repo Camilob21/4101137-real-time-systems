@@ -1,11 +1,14 @@
 # Week-1 talk — Recap: why real-time (40 min)
 
-**Precedes:** `labs/lab01_bringup.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab01_bringup.md](../lab01_bringup.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. explain why a correct result at the wrong time is
-a wrong result, citing a real failure; 2. describe the course contract (GreenField,
-the RET, "show me the trace"); 3. verify their toolchain builds both starter targets.
+By the end, the student can:
+
+1. explain why a correct result at the wrong time is a wrong result, citing a real failure.
+2. describe the course contract (GreenField, the RET, "show me the trace").
+3. verify their toolchain builds both starter targets.
 
 ## Structure
 | Min | Segment | Purpose in one line |

@@ -1,6 +1,8 @@
 # Week 8 — Workshop — the design review
-> **Reading:** review of chs. 2, 4, and 7 — ch. 14 has practice solutions. · **Module:** 3
-> **Due today:** Problem Set 1. **Workshop scope:** chs. 2, 4, 7 + everything measured through week 7.
+> - **Reading:** review of chs. 2, 4, and 7 — ch. 14 has practice solutions.
+> - **Module:** 3
+> - **Due today:** Problem Set 1.
+> - **Workshop scope:** chs. 2, 4, 7 + everything measured through week 7.
 
 **From:** Eng. Samuel Cifuentes — *"Formal design review. Each pair presents the
 complete analysis of their node: task set, utilization, RTA with blocking, and the

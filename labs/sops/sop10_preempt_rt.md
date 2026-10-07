@@ -1,7 +1,8 @@
 # SOP-10 — PREEMPT_RT on the SBC + cyclictest
 
-**Serves:** `labs/lab10_preempt_rt.md` and `labs/lab12_isolation.md` ·
-**Hardware:** Raspberry Pi 4/5, 32 GB microSD, wired Ethernet recommended.
+- **Serves:** [lab10_preempt_rt.md](../lab10_preempt_rt.md) and [lab12_isolation.md](../lab12_isolation.md)
+- **Hardware:** Raspberry Pi 4/5, 32 GB microSD, wired Ethernet recommended.
+
 Steps, checks, and troubleshooting only — the *why* lives in the lab.
 
 > **Draft** — commands pending validation on course hardware.

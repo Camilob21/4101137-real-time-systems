@@ -1,11 +1,14 @@
 # Week-10 talk — PREEMPT_RT: what it changes in the kernel (40 min)
 
-**Precedes:** `labs/lab10_preempt_rt.md` · **Audience:** students right before the lab.
+- **Precedes:** [lab10_preempt_rt.md](../lab10_preempt_rt.md)
+- **Audience:** students right before the lab.
 
 ## Objectives
-By the end, the student can: 1. name why stock Linux has unbounded latency and what
-PREEMPT_RT changes; 2. run `cyclictest` with a defensible protocol; 3. read a
-latency histogram by its max, and place it against a deadline.
+By the end, the student can:
+
+1. name why stock Linux has unbounded latency and what PREEMPT_RT changes.
+2. run `cyclictest` with a defensible protocol.
+3. read a latency histogram by its max, and place it against a deadline.
 
 ## Structure
 | Min | Segment | Purpose in one line |

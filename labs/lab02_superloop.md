@@ -1,6 +1,7 @@
 # Week 2 — The provided superloop: run, read, measure
-> **Reading:** [READINGS.md](../READINGS.md), week 2 · **Module:** 1
-> **Firmware:** [firmware/superloop/](../firmware/superloop/) (provided — you complete three marked pieces; nothing is invented today)
+> - **Reading:** [READINGS.md](../READINGS.md), week 2
+> - **Module:** 1
+> - **Firmware:** [firmware/superloop/](../firmware/superloop/) (provided — you complete three marked pieces; nothing is invented today)
 
 **From:** Eng. Samuel Cifuentes — *"Before you pitch me a kernel, measure what we
 already have. I'm handing you the Control node as a superloop — the architecture
