@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<text x="280.0" y="44.0" text-anchor="start" font-size="22" font-weight="700" fill="#0f172a">loop at FIFO 90, hog at FIFO 95</text>
+<text x="266.0" y="86.0" text-anchor="end" font-size="19" font-weight="700" fill="#e11d48">pump loop</text>
+<line x1="280.0" y1="94.0" x2="1160.0" y2="94.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="280.0" y="66.0" width="24.2" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="504.4" y="88.0" text-anchor="start" font-size="18" font-weight="700" fill="#e11d48">✕ miss</text>
+<text x="724.4" y="88.0" text-anchor="start" font-size="18" font-weight="700" fill="#e11d48">✕ miss</text>
+<text x="944.4" y="88.0" text-anchor="start" font-size="18" font-weight="700" fill="#e11d48">✕ miss</text>
+<text x="266.0" y="130.0" text-anchor="end" font-size="19" font-weight="700" fill="#d97706">hog</text>
+<line x1="280.0" y1="138.0" x2="1160.0" y2="138.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="346.0" y="110.0" width="814.0" height="28.0" rx="0" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="280.0" y="170.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">0 ms</text>
+<text x="500.0" y="170.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">10 ms</text>
+<text x="720.0" y="170.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">20 ms</text>
+<text x="940.0" y="170.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">30 ms</text>
+<text x="1160.0" y="170.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">40 ms</text>
+<text x="280.0" y="234.0" text-anchor="start" font-size="22" font-weight="700" fill="#0f172a">loop at DEADLINE 2 ms / 10 ms, same hog</text>
+<text x="266.0" y="276.0" text-anchor="end" font-size="19" font-weight="700" fill="#e11d48">pump loop</text>
+<line x1="280.0" y1="284.0" x2="1160.0" y2="284.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="280.0" y="256.0" width="24.2" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<rect x="500.0" y="256.0" width="24.2" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<rect x="720.0" y="256.0" width="24.2" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<rect x="940.0" y="256.0" width="24.2" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="266.0" y="320.0" text-anchor="end" font-size="19" font-weight="700" fill="#d97706">hog</text>
+<line x1="280.0" y1="328.0" x2="1160.0" y2="328.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="346.0" y="300.0" width="154.0" height="28.0" rx="0" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<rect x="524.2" y="300.0" width="195.8" height="28.0" rx="0" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<rect x="744.2" y="300.0" width="195.8" height="28.0" rx="0" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<rect x="964.2" y="300.0" width="195.8" height="28.0" rx="0" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="266.0" y="386.0" text-anchor="end" font-size="19" font-weight="700" fill="#7c3aed">loop's budget</text>
+<line x1="280.0" y1="400.0" x2="1160.0" y2="400.0" stroke="#cbd5e1" stroke-width="2"/>
+<polyline points="280.0,356.0 304.2,380.2 500.0,380.2 500.0,356.0 524.2,380.2 720.0,380.2 720.0,356.0 744.2,380.2 940.0,380.2 940.0,356.0 964.2,380.2 1160.0,380.2" fill="none" stroke="#7c3aed" stroke-width="3"/>
+<text x="280.0" y="432.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">0 ms</text>
+<text x="500.0" y="432.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">10 ms</text>
+<text x="720.0" y="432.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">20 ms</text>
+<text x="940.0" y="432.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">30 ms</text>
+<text x="1160.0" y="432.0" text-anchor="middle" font-size="16" font-weight="400" fill="#475569">40 ms</text>
+</svg>

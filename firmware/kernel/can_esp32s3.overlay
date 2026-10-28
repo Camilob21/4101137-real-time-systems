@@ -1,0 +1,23 @@
+/*
+ * CAN (TWAI) link to the Hub, project weeks 11-14. The board's default TWAI pins
+ * (GPIO5/6) are instr_ctrl and instr_cons, so CAN moves to GPIO10 (TX) and
+ * GPIO11 (RX), wired to an SN65HVD230 transceiver.
+ */
+
+#include <zephyr/dt-bindings/pinctrl/esp32s3-pinctrl.h>
+
+&pinctrl {
+	twai_hub: twai_hub {
+		group1 {
+			pinmux = <TWAI_TX_GPIO10>,
+				 <TWAI_RX_GPIO11>;
+		};
+	};
+};
+
+&twai {
+	status = "okay";
+	pinctrl-0 = <&twai_hub>;
+	pinctrl-names = "default";
+	bitrate = <500000>;
+};

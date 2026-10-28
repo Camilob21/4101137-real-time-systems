@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<rect x="40.0" y="60.0" width="300.0" height="100.0" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="190.0" y="106.0" text-anchor="middle" font-size="24" font-weight="700" fill="#16a34a">control loop</text>
+<text x="190.0" y="132.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">a healthy cycle</text>
+<rect x="520.0" y="60.0" width="300.0" height="100.0" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="670.0" y="106.0" text-anchor="middle" font-size="24" font-weight="700" fill="#7c3aed">hardware watchdog</text>
+<text x="670.0" y="132.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">counts down on its own</text>
+<rect x="520.0" y="300.0" width="300.0" height="100.0" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="670.0" y="346.0" text-anchor="middle" font-size="24" font-weight="700" fill="#e11d48">safe state</text>
+<text x="670.0" y="372.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">valve closed (spring)</text>
+<rect x="940.0" y="300.0" width="220.0" height="100.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="1050.0" y="358.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">reboot</text>
+<line x1="340.0" y1="110.0" x2="520.0" y2="110.0" stroke="#0f172a" stroke-width="3" marker-end="url(#ar-ink)"/>
+<text x="430.0" y="98.0" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">kick</text>
+<line x1="670.0" y1="160.0" x2="670.0" y2="300.0" stroke="#e11d48" stroke-width="4" marker-end="url(#ar-c5)"/>
+<text x="690.0" y="240.0" text-anchor="start" font-size="22" font-weight="700" fill="#e11d48">no kick in time: bite</text>
+<line x1="820.0" y1="350.0" x2="940.0" y2="350.0" stroke="#0f172a" stroke-width="3" marker-end="url(#ar-ink)"/>
+<rect x="40.0" y="260.0" width="360.0" height="140.0" rx="12" fill="#f8fafc" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="220.0" y="300.0" text-anchor="middle" font-size="21" font-weight="700" fill="#475569">kicking from a timer ISR</text>
+<text x="220.0" y="332.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">keeps kicking while</text>
+<text x="220.0" y="360.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">the application is dead</text>
+<line x1="60.0" y1="280.0" x2="380.0" y2="385.0" stroke="#e11d48" stroke-width="4"/>
+</svg>

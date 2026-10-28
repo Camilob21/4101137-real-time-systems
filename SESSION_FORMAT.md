@@ -1,30 +1,20 @@
 # Session format
 
-Each session has up to three documents, each with a distinct job:
+This course follows the shared course standard,
+[course-kit/STANDARD.md](https://github.com/saacifuentesmu/course-kit/blob/main/STANDARD.md):
+a 40-minute talk (a Marp deck whose speaker notes are the script) and a 2-hour lab
+each week, plus an SOP only for heavy bring-ups. [`coursekit.toml`](coursekit.toml)
+maps this repository's files to the standard's document types;
+`python3 ../course-kit/tools/coursekit.py lint .` checks them.
 
-| Doc | Audience | Content | Budget |
-|---|---|---|---|
-| **lab.md** | Students | Mission (GreenField memo) → what gets measured → tasks with evidence → RET deliverables → rubric | ≤ ~1,500 words |
-| **lecture.md** | Instructor (script for the 40 min) | Objectives, timing table, board sketches, misconceptions to anticipate, bridge to the lab | a script, not prose |
-| **sop.md** | Students (mechanics) | Commands, wiring, checks, and troubleshooting only — the *why* lives in the lab | **only if the session needs it** (heavy bring-ups: Linux SBC, AMP/sysbuild, tracing) |
+What this course fixes on top of the standard:
 
-Compactness rules (mandatory): one explanation per concept; tables and diagrams
-over prose; questions without the answer included; advanced math in `<details>`;
-no "TL;DR + In plain English + technical" sections repeating each other.
+| | This course |
+|---|---|
+| Course box in every lab | **What about FreeRTOS?** — 3–5 lines: the equivalent API, and when that option wins |
+| Living record | **RET — Timing Evidence Report** ([templates/ret.md](templates/ret.md)): updated weekly, handed in at the workshop (week 7) and at the close |
+| House rule | *"Show me the trace"*: every timing claim cites a measurement and its instrument |
+| Deck accent | `#0d9488` |
 
-Fixed lab.md sections:
-
-1. **Memo** from the stakeholder (opens the session; it is also the objective).
-2. **What you'll measure** — the evidence table with `____` cells the lab fills in.
-3. **Tasks** A/B/C, each with its **Evidence:** line.
-4. **What about FreeRTOS?** — 3–5 lines: how it would be done with that API and when that option wins.
-5. **Deliverables (RET)** — which RET sections get updated today.
-6. **Rubric** (table, 100 pts).
-
-The course's living deliverable is the **RET — Timing Evidence Report**
-(template in [templates/ret.md](templates/ret.md)), updated every week and handed
-in at the workshop (week 8) and at the close.
-
-Templates: [templates/lab.md](templates/lab.md) ·
-[templates/lecture.md](templates/lecture.md) ·
-[templates/sop.md](templates/sop.md) · [templates/ret.md](templates/ret.md)
+Templates: [lab](templates/lab.md) · [talk](templates/talk.md) ·
+[SOP](templates/sop.md) · [RET](templates/ret.md)

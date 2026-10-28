@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1098 400" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<text x="30.0" y="54.0" text-anchor="start" font-size="22" font-weight="700" fill="#0f172a">Stock kernel: the shaded work can't be preempted</text>
+<rect x="30.0" y="74.0" width="120.0" height="80.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="90.0" y="120.0" text-anchor="middle" font-size="17" font-weight="700" fill="#2563eb">timer IRQ</text>
+<rect x="158.0" y="74.0" width="220.0" height="80.0" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="268.0" y="120.0" text-anchor="middle" font-size="17" font-weight="700" fill="#e11d48">other devices' IRQs</text>
+<rect x="386.0" y="74.0" width="220.0" height="80.0" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="496.0" y="120.0" text-anchor="middle" font-size="17" font-weight="700" fill="#e11d48">a driver's spinlock</text>
+<rect x="614.0" y="74.0" width="150.0" height="80.0" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="689.0" y="120.0" text-anchor="middle" font-size="17" font-weight="700" fill="#e11d48">softirq</text>
+<rect x="772.0" y="74.0" width="140.0" height="80.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="842.0" y="120.0" text-anchor="middle" font-size="17" font-weight="700" fill="#2563eb">scheduler</text>
+<rect x="920.0" y="74.0" width="150.0" height="80.0" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="995.0" y="120.0" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">your thread</text>
+<line x1="158.0" y1="170.0" x2="764.0" y2="170.0" stroke="#e11d48" stroke-width="3"/>
+<text x="461.0" y="196.0" text-anchor="middle" font-size="18" font-weight="700" fill="#e11d48">latency = the longest of these, in code you didn't write</text>
+<text x="30.0" y="244.0" text-anchor="start" font-size="22" font-weight="700" fill="#0f172a">PREEMPT_RT: the same work, now in threads that priority can jump</text>
+<rect x="30.0" y="264.0" width="120.0" height="80.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="90.0" y="310.0" text-anchor="middle" font-size="17" font-weight="700" fill="#2563eb">timer IRQ</text>
+<rect x="158.0" y="264.0" width="220.0" height="80.0" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="268.0" y="300.0" text-anchor="middle" font-size="17" font-weight="400" fill="#475569">other devices' IRQs</text>
+<text x="268.0" y="326.0" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">now threads</text>
+<rect x="386.0" y="264.0" width="220.0" height="80.0" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="496.0" y="300.0" text-anchor="middle" font-size="17" font-weight="400" fill="#475569">a driver's spinlock</text>
+<text x="496.0" y="326.0" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">rtmutex + PI</text>
+<rect x="614.0" y="264.0" width="150.0" height="80.0" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="689.0" y="300.0" text-anchor="middle" font-size="17" font-weight="400" fill="#475569">softirq</text>
+<text x="689.0" y="326.0" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">threaded</text>
+<rect x="772.0" y="264.0" width="140.0" height="80.0" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="842.0" y="310.0" text-anchor="middle" font-size="17" font-weight="700" fill="#2563eb">scheduler</text>
+<rect x="920.0" y="264.0" width="150.0" height="80.0" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="995.0" y="310.0" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">your thread</text>
+<line x1="158.0" y1="360.0" x2="764.0" y2="360.0" stroke="#16a34a" stroke-width="3"/>
+<text x="461.0" y="386.0" text-anchor="middle" font-size="18" font-weight="700" fill="#16a34a">your thread outranks them: the wait becomes a switch</text>
+</svg>

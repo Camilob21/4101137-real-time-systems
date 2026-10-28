@@ -1,0 +1,125 @@
+/* @theme course */
+/*
+ * Shared Marp theme for UNAL courses (course-kit/STANDARD.md §5).
+ * A deck sets only its course accent:  style: section { --course: #0d9488; }
+ *
+ * Classes (<!-- _class: … -->):
+ *   lead       title slide
+ *   agenda     numbered list; item N takes palette color N
+ *   s1 … s8    segment N of the agenda: accent = palette color N
+ *   question   peer-instruction slide: the question, then an A–D list
+ *   takeaway   the one sentence to remember, in a blockquote
+ *   figure     one large figure, small title
+ *
+ * Palette (strong / tint), for SVG figures and Mermaid as well:
+ *   c1 #ea580c / #ffedd5   c2 #2563eb / #dbeafe   c3 #16a34a / #dcfce7   c4 #0d9488 / #ccfbf1
+ *   c5 #e11d48 / #ffe4e6   c6 #7c3aed / #ede9fe   c7 #d97706 / #fef3c7   c8 #db2777 / #fce7f3
+ */
+
+@import 'default';
+
+section {
+  --course: #0f766e;
+  --c1: #ea580c; --c2: #2563eb; --c3: #16a34a; --c4: #0d9488;
+  --c5: #e11d48; --c6: #7c3aed; --c7: #d97706; --c8: #db2777;
+  --t1: #ffedd5; --t2: #dbeafe; --t3: #dcfce7; --t4: #ccfbf1;
+  --t5: #ffe4e6; --t6: #ede9fe; --t7: #fef3c7; --t8: #fce7f3;
+  --ink: #0f172a;
+  --muted: #475569;
+  --panel: #f8fafc;
+  --accent: var(--course);
+  font-family: 'Inter', 'Segoe UI', 'DejaVu Sans', Arial, sans-serif;
+  font-size: 26px;
+  padding: 50px 64px;
+  color: var(--ink);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 82%, var(--panel) 100%);
+}
+
+h1 { color: var(--course); }
+h2 {
+  color: var(--accent);
+  border-bottom: 6px solid var(--accent);
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+strong { color: var(--accent); }
+img { display: block; margin: 0 auto; }
+code { background: #f1f5f9; }
+pre { font-size: 19px; }
+table { font-size: 22px; margin: 0 auto; }
+th { background: var(--accent); color: #fff; }
+blockquote {
+  border-left: 10px solid var(--accent);
+  background: var(--panel);
+  padding: 14px 22px;
+  border-radius: 0 12px 12px 0;
+  color: var(--ink);
+}
+header {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 4px 14px;
+  border-radius: 0 0 10px 10px;
+  left: 64px;
+  top: 0;
+}
+section::after { color: var(--accent); font-weight: 700; }
+
+section.lead {
+  background: linear-gradient(135deg, var(--course) 0%, #4f46e5 60%, #7c3aed 100%);
+  color: #fff;
+  justify-content: center;
+}
+section.lead h1 { color: #fff; font-size: 64px; }
+section.lead strong { color: #fde68a; }
+section.lead code { background: rgba(255, 255, 255, 0.2); color: #fff; }
+section.lead::after { color: #fff; }
+
+section.agenda ol li { margin: 8px 0; padding-left: 6px; }
+section.agenda ol li::marker { font-weight: 800; }
+section.agenda ol li:nth-child(1)::marker, section.agenda ol li:nth-child(1) strong { color: var(--c1); }
+section.agenda ol li:nth-child(2)::marker, section.agenda ol li:nth-child(2) strong { color: var(--c2); }
+section.agenda ol li:nth-child(3)::marker, section.agenda ol li:nth-child(3) strong { color: var(--c3); }
+section.agenda ol li:nth-child(4)::marker, section.agenda ol li:nth-child(4) strong { color: var(--c4); }
+section.agenda ol li:nth-child(5)::marker, section.agenda ol li:nth-child(5) strong { color: var(--c5); }
+section.agenda ol li:nth-child(6)::marker, section.agenda ol li:nth-child(6) strong { color: var(--c6); }
+section.agenda ol li:nth-child(7)::marker, section.agenda ol li:nth-child(7) strong { color: var(--c7); }
+section.agenda ol li:nth-child(8)::marker, section.agenda ol li:nth-child(8) strong { color: var(--c8); }
+
+/* Before s1–s8 so that "s7 takeaway" keeps segment 7's color. */
+section.takeaway {
+  --accent: var(--c8);
+  background: linear-gradient(135deg, #fdf2f8 0%, #ede9fe 100%);
+}
+section.takeaway blockquote { font-size: 30px; background: #fff; }
+
+section.question { --accent: var(--c6); }
+section.question h2 { font-size: 40px; }
+section.question ol {
+  list-style: upper-alpha;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 40px;
+  padding-left: 40px;
+}
+section.question ol li {
+  background: var(--panel);
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 16px;
+}
+section.question ol li::marker { color: var(--accent); font-weight: 800; }
+
+section.figure h2 { font-size: 30px; border-bottom-width: 4px; margin-bottom: 8px; }
+section.figure img { max-height: 520px; }
+
+section.s1 { --accent: var(--c1); }
+section.s2 { --accent: var(--c2); }
+section.s3 { --accent: var(--c3); }
+section.s4 { --accent: var(--c4); }
+section.s5 { --accent: var(--c5); }
+section.s6 { --accent: var(--c6); }
+section.s7 { --accent: var(--c7); }
+section.s8 { --accent: var(--c8); }

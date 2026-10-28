@@ -1,4 +1,5 @@
 # Week 2 — The provided superloop: run, read, measure
+> - **Talk:** [02_vocabulary](presentations/02_vocabulary.md)
 > - **Reading:** [READINGS.md](../READINGS.md), week 2
 > - **Module:** 1
 > - **Firmware:** [firmware/superloop/](../firmware/superloop/) (provided — you complete three marked pieces; nothing is invented today)
@@ -22,14 +23,16 @@ each task): your instrument is the logic analyzer.
 Every pair measures the same board, so today's numbers are comparable across the
 room — and week 3 re-measures all of them on the ESP32-S3.
 
-| Measurement | Your value | Reference |
-|---|---|---|
-| Actual sampling period (nominal 1 kHz): average | ____ µs | 1000 µs |
-| Sampling jitter: max over ≥ 30 s | ____ µs | write it down: it's *the course baseline* |
-| ISR → loop-service latency (flow pulse) | ____ µs | |
-| Sampling jitter, max, **with the flash cache off** | ____ µs | the gap against row 2 is the ART accelerator |
-| Sampling jitter **with the blocking command active** | ____ µs | compare against row 2 |
-| `backlog_peak`, idle → during the blocking command | ____ → ____ ticks | the same story, counted by the firmware itself |
+Hand in the prediction column before the lab.
+
+| Measurement | Prediction | Your value | Reference |
+|---|---|---|---|
+| Actual sampling period (nominal 1 kHz): average | ____ µs | ____ µs | 1000 µs |
+| Sampling jitter: max over ≥ 30 s | ____ µs | ____ µs | write it down: it's *the course baseline* |
+| ISR → loop-service latency (flow pulse) | ____ µs | ____ µs | |
+| Sampling jitter, max, **with the flash cache off** | ____ µs | ____ µs | the gap against row 2 is the ART accelerator |
+| Sampling jitter **with the blocking command active** | ____ µs | ____ µs | compare against row 2 |
+| `backlog_peak`, idle → during the blocking command | ____ → ____ | ____ → ____ ticks | the same story, counted by the firmware itself |
 
 ## Tasks
 
@@ -150,7 +153,7 @@ never answers, TASK 3 is missing: `main()` ran off the end and there is no loop.
 | REQ-CTRL-02 | When pressure exceeds the threshold, the system shall close the valve within 5 ms. |
 
 - They go in **RET §1**, and from today on every piece of evidence cites the REQ it
-  verifies (e.g. "row 2 of the table verifies REQ-CTRL-03"). In week 8 you'll learn
+  verifies (e.g. "row 2 of the table verifies REQ-CTRL-03"). In week 7 you'll learn
   what industry calls this discipline.
 - **Evidence:** the requirements table in RET §1.
 

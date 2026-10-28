@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 445" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<text x="230.0" y="40.0" text-anchor="middle" font-size="30" font-weight="700" fill="#e11d48">Hard</text>
+<line x1="70.0" y1="210.0" x2="400.0" y2="210.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<line x1="70.0" y1="330.0" x2="70.0" y2="60.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<text x="62.0" y="64.0" text-anchor="end" font-size="20" font-weight="700" fill="#475569">v</text>
+<text x="400.0" y="236.0" text-anchor="end" font-size="20" font-weight="700" fill="#475569">t</text>
+<line x1="268.0" y1="66.0" x2="268.0" y2="330.0" stroke="#e11d48" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="268.0" y="352.0" text-anchor="middle" font-size="17" font-weight="700" fill="#e11d48">deadline</text>
+<polyline points="70.0,90.0 268.0,90.0 268.0,306.0 400.0,306.0" fill="none" stroke="#e11d48" stroke-width="5"/>
+<text x="230.0" y="395.0" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">a late result does damage</text>
+<text x="230.0" y="425.0" text-anchor="middle" font-size="19" font-weight="400" fill="#475569">e-stop: a hose bursts</text>
+<text x="650.0" y="40.0" text-anchor="middle" font-size="30" font-weight="700" fill="#7c3aed">Firm</text>
+<line x1="490.0" y1="210.0" x2="820.0" y2="210.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<line x1="490.0" y1="330.0" x2="490.0" y2="60.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<text x="482.0" y="64.0" text-anchor="end" font-size="20" font-weight="700" fill="#475569">v</text>
+<text x="820.0" y="236.0" text-anchor="end" font-size="20" font-weight="700" fill="#475569">t</text>
+<line x1="688.0" y1="66.0" x2="688.0" y2="330.0" stroke="#e11d48" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="688.0" y="352.0" text-anchor="middle" font-size="17" font-weight="700" fill="#e11d48">deadline</text>
+<polyline points="490.0,90.0 688.0,90.0 688.0,210.0 820.0,210.0" fill="none" stroke="#7c3aed" stroke-width="5"/>
+<text x="650.0" y="395.0" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">a late result is worthless</text>
+<text x="650.0" y="425.0" text-anchor="middle" font-size="19" font-weight="400" fill="#475569">console reply: stale</text>
+<text x="1070.0" y="40.0" text-anchor="middle" font-size="30" font-weight="700" fill="#16a34a">Soft</text>
+<line x1="910.0" y1="210.0" x2="1240.0" y2="210.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<line x1="910.0" y1="330.0" x2="910.0" y2="60.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<text x="902.0" y="64.0" text-anchor="end" font-size="20" font-weight="700" fill="#475569">v</text>
+<text x="1240.0" y="236.0" text-anchor="end" font-size="20" font-weight="700" fill="#475569">t</text>
+<line x1="1108.0" y1="66.0" x2="1108.0" y2="330.0" stroke="#e11d48" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1108.0" y="352.0" text-anchor="middle" font-size="17" font-weight="700" fill="#e11d48">deadline</text>
+<polyline points="910.0,90.0 1108.0,90.0 1157.5,156.0 1240.0,192.0" fill="none" stroke="#16a34a" stroke-width="5"/>
+<text x="1070.0" y="395.0" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">a late result is worth less</text>
+<text x="1070.0" y="425.0" text-anchor="middle" font-size="19" font-weight="400" fill="#475569">telemetry: a late point</text>
+</svg>

@@ -1,5 +1,5 @@
 # Week 5 — Tracing: seeing what the analyzer can't
-> - **Tech guide:** [SOP-05](sops/sop05_tracing.md)
+> - **Talk:** [05_tracing](presentations/05_tracing.md) · **Tech guide:** [SOP-05](sops/sop05_tracing.md)
 > - **Reading:** [READINGS.md](../READINGS.md), week 5
 > - **Module:** 4
 
@@ -18,24 +18,29 @@ the judge of the *story* (who and why). They're used together.
 
 ## What you'll measure
 
-| Measurement | Your value | Contrast |
-|---|---|---|
-| Context switch per the trace | ____ µs | vs. GPIO (wk 4): ____ µs |
-| ISR → thread latency per the trace | ____ µs | vs. GPIO: ____ µs |
-| Per-thread CPU load (%) in normal operation | ____ | sums ≈ 100 % with idle |
-| Tracing overhead on sampling jitter | ____ µs | measured with GPIO, tracing on/off |
+Hand in the prediction column before the lab.
+
+| Measurement | Prediction | Your value | Contrast |
+|---|---|---|---|
+| Context switch per the trace | ____ µs | ____ µs | vs. GPIO (wk 4): ____ µs |
+| Tick ISR → sampling start per the trace | ____ µs | ____ µs | vs. `lat_peak_us`: ____ µs |
+| Per-thread CPU load (%) in normal operation | | ____ | sums ≈ 100 % with idle and the tracer |
+| Tracing overhead on max sampling jitter | ____ µs | ____ µs | analyzer, tracing on vs. off |
 
 ## Tasks
 
 ### Task A — Enable tracing
-- Turn on Zephyr's tracing subsystem in the node (SystemView if you have a probe;
-  CTF over UART if not — the SOP covers both routes).
+- Stream CTF out of the S3's UART jack at 4 Mbaud (SOP-05): two build files, no C
+  changes. In this build the console moves to the USB jack.
 - **Evidence:** first trace open in the viewer, with the node's threads named.
 
 ### Task B — The story of one preemption
-- Generate a flow event while the console runs: capture in the trace the chain
-  ISR → `k_msgq` → thread wake-up → preemption of the console.
-- Note the timestamps and compare against the GPIO measurement.
+- Type `calib` and capture 1–2 s. Find one tick inside it and name the chain: tick
+  ISR → sampling ready (the ISR's `k_msgq_put`) → console preempted (ready, not
+  blocked) → sampling runs (`instr_samp` rises) → sampling pends (its `k_msgq_get`
+  blocks) → back to the console. Only the first ≈ 75 ms of `calib` survive: why?
+- Find a 10th tick: where does `k_sem_give` send the CPU instead?
+- Note the timestamps and compare against the GPIO measurement and `lat_peak_us`.
 - **Evidence:** annotated trace screenshot (arrows over the events).
 
 ### Task C — The price of looking
@@ -45,10 +50,11 @@ the judge of the *story* (who and why). They're used together.
 
 ## What about FreeRTOS?
 
-Same concept, different tools: `configUSE_TRACE_FACILITY` + Tracealyzer
-(commercial) or SystemView. The transferable lesson is about instruments: every
-observer perturbs — which is why this course measures *with* GPIO and explains
-*with* traces.
+Same concept, different tools: the kernel's trace macros stay empty until a
+recorder fills them, Percepio Tracealyzer (commercial) or SEGGER SystemView. Under
+ESP-IDF on the S3, app_trace streams SystemView data over the same USB jack. The
+transferable lesson is about instruments: every observer perturbs, which is why
+this course measures *with* GPIO and explains *with* traces.
 
 ## Deliverables (RET)
 

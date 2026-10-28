@@ -1,0 +1,20 @@
+/* The hard path's pins only: PROCPU owns every other one. */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	aliases {
+		led0 = &valve_out;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		valve_out: valve_out { gpios = <&gpio0 21 GPIO_ACTIVE_HIGH>; };
+	};
+
+	instr {
+		compatible = "gpio-leds";
+		instr_samp: instr_samp { gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>; };
+		instr_ctrl: instr_ctrl { gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>; };
+	};
+};

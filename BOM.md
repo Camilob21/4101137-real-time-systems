@@ -29,6 +29,7 @@ and the final project). The **Hub Kit** (modules 5–6) is one per large group
 | 9 | **Breadboard kit**: 830-point breadboard, M-M/M-F jumpers, LEDs, resistors, buttons, potentiometer ("pressure"), breadboard supply | 1 | The base of every lab | $30,000–50,000 ([search kits](https://listado.mercadolibre.com.co/kit-protoboard-arduino)) | US$6–10 |
 | 10 | USB-C **data** cable | 1–2 | Programming/monitor (check it's not charge-only) | $8,000–15,000 | US$1–2 |
 | 11 | **0.96" SSD1306 128×64 OLED (I²C)** *(optional)* | 1 | The superloop's HMI (weeks 2–4) — the node runs without it | [$10,000–20,000](https://listado.mercadolibre.com.co/pantalla-oled-096-i2c) | US$1–2 |
+| 12 | **SN65HVD230 CAN transceiver module (3.3 V)** | 1 | The node's CAN link to the Hub (project, weeks 11–14) | [search](https://listado.mercadolibre.com.co/sn65hvd230) | US$1–5 |
 
 **Control Kit total**: ~**$190,000–320,000 COP** per group (≈ $65,000–110,000 per
 student in groups of 3). Via AliExpress: ≈ **US$32–50** + shipping.
@@ -37,8 +38,9 @@ student in groups of 3). Via AliExpress: ≈ **US$32–50** + shipping.
 
 | # | Component | Qty | What for | Approx. price |
 |---|-----------|-----|----------|---------------|
-| 11 | **Raspberry Pi 4 (4 GB)** or Pi 5 + 32 GB microSD + official supply | 1 | The Hub (modules 5–6): PREEMPT_RT, `SCHED_DEADLINE`, GUI, routing | [$350,000–550,000](https://listado.mercadolibre.com.co/raspberry-pi-4) (verify; also [Sigma](https://www.sigmaelectronica.net/fabricante/raspberry-pi/)) |
-| 12 | Hub display | 1 | Local GUI | Option A: **web HMI** (laptop browser) — $0. Option B: lab HDMI monitor — $0. Option C: 7" touchscreen ($200,000–300,000), only if the group wants it |
+| 13 | **Raspberry Pi 4 (4 GB)** or Pi 5 + 32 GB microSD + official supply | 1 | The Hub (modules 5–6): PREEMPT_RT, `SCHED_DEADLINE`, GUI, routing | [$350,000–550,000](https://listado.mercadolibre.com.co/raspberry-pi-4) (verify; also [Sigma](https://www.sigmaelectronica.net/fabricante/raspberry-pi/)) |
+| 14 | Hub display | 1 | Local GUI | Option A: **web HMI** (laptop browser) — $0. Option B: lab HDMI monitor — $0. Option C: 7" touchscreen ($200,000–300,000), only if the group wants it |
+| 15 | **Waveshare RS485 CAN HAT** (MCP2515 + 3.3 V transceiver, 120 Ω on board) | 1 | The Hub's end of the CAN bus ([SOP-12](labs/sops/sop12_can.md)); Waveshare confirms the Pi 4B | ≈ US$16–20 abroad ([Waveshare](https://www.waveshare.com/RS485-CAN-HAT.htm)); [search locally](https://listado.mercadolibre.com.co/rs485-can-hat) |
 
 > **Recommendation**: to contain cost, design the Hub GUI as a web HMI or LVGL on
 > the lab's HDMI; the 7" touchscreen is optional. If the department can lend 4–6
@@ -55,5 +57,6 @@ for sensors and modules; national shipping to Manizales.
 - **Week 1**: the NUCLEO-L476RG and its USB Mini-B cable; the lab lends boards to whoever needs one.
 - **Week 2**: logic analyzer (#2) and breadboard kit (#9) — the jitter baseline is measured here.
 - **Week 3**: ESP32-S3 board (#1) — buy locally, don't wait on AliExpress.
-- **Weeks 5–6**: pump, driver, flow sensor, servo, DS18B20, potentiometer, TFT display (#3–8) — the jitter-vs-control lab (week 6) uses the pump and the flow sensor.
-- **Week 10**: Hub Kit (#11–12).
+- **Weeks 5–6**: pump, driver, flow sensor, servo, DS18B20, potentiometer, TFT display (#3–8) — the pump and the flow sensor serve week 6's optional jitter-vs-control task and the project's node.
+- **Week 9**: Hub Kit (#13–14).
+- **Week 11**: CAN transceiver (#12) and CAN HAT (#15), plus a twisted pair (one pair of a network cable works).

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1270 620" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<rect x="30.0" y="20.0" width="820.0" height="580.0" rx="26" fill="none" stroke="#ea580c" stroke-width="4"/>
+<text x="48.0" y="50.0" text-anchor="start" font-size="22" font-weight="700" fill="#ea580c">IRQ affinity</text>
+<text x="48.0" y="76.0" text-anchor="start" font-size="19" font-weight="400" fill="#475569">stops: device interrupts</text>
+<rect x="105.0" y="85.0" width="670.0" height="450.0" rx="26" fill="none" stroke="#7c3aed" stroke-width="4"/>
+<text x="123.0" y="115.0" text-anchor="start" font-size="22" font-weight="700" fill="#7c3aed">isolcpus · nohz_full · rcu_nocbs</text>
+<text x="123.0" y="141.0" text-anchor="start" font-size="19" font-weight="400" fill="#475569">stops: other tasks, ticks, RCU</text>
+<rect x="180.0" y="150.0" width="520.0" height="320.0" rx="26" fill="none" stroke="#2563eb" stroke-width="4"/>
+<text x="198.0" y="180.0" text-anchor="start" font-size="22" font-weight="700" fill="#2563eb">affinity (taskset)</text>
+<text x="198.0" y="206.0" text-anchor="start" font-size="19" font-weight="400" fill="#475569">stops: where the loop may run</text>
+<rect x="255.0" y="215.0" width="370.0" height="190.0" rx="26" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+<text x="273.0" y="245.0" text-anchor="start" font-size="22" font-weight="700" fill="#16a34a">SCHED_DEADLINE</text>
+<text x="273.0" y="271.0" text-anchor="start" font-size="19" font-weight="400" fill="#475569">stops: CPU time, by contract</text>
+<text x="440.0" y="356.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">core 3: the pump loop</text>
+<line x1="1010.0" y1="200.0" x2="560.0" y2="340.0" stroke="#e11d48" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#ar-c5)"/>
+<text x="1250.0" y="160.0" text-anchor="end" font-size="22" font-weight="700" fill="#e11d48">shared cache and memory bus:</text>
+<text x="1250.0" y="188.0" text-anchor="end" font-size="22" font-weight="700" fill="#e11d48">no layer stops it</text>
+</svg>

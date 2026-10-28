@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 410" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f1f5f9"/><line x1="0" y1="0" x2="0" y2="8" stroke="#94a3b8" stroke-width="3"/></pattern></defs>
+<rect x="20" y="40" width="800" height="300" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="40" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#475569">On the S3: costs CPU</text>
+<rect x="890" y="40" width="370" height="300" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="910" y="74" text-anchor="start" font-size="20" font-weight="700" fill="#475569">On your laptop: free</text>
+<rect x="40" y="110" width="165" height="170" rx="12" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+<rect x="40" y="110" width="165" height="44" rx="12" fill="#2563eb" stroke="none" stroke-width="0"/>
+<rect x="40" y="140" width="165" height="14" rx="0" fill="#2563eb" stroke="none" stroke-width="0"/>
+<text x="122.5" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">Kernel hooks</text>
+<text x="122.5" y="196" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">thread switches,</text>
+<text x="122.5" y="226" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">ISRs, IPC calls</text>
+<line x1="209" y1="195" x2="229" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="235" y="110" width="165" height="170" rx="12" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+<rect x="235" y="110" width="165" height="44" rx="12" fill="#2563eb" stroke="none" stroke-width="0"/>
+<rect x="235" y="140" width="165" height="14" rx="0" fill="#2563eb" stroke="none" stroke-width="0"/>
+<text x="317.5" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">CTF encoder</text>
+<text x="317.5" y="196" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">8 B time + 2 B id</text>
+<text x="317.5" y="226" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">+ fields, IRQs off</text>
+<line x1="404" y1="195" x2="424" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="430" y="110" width="165" height="170" rx="12" fill="#fff" stroke="#d97706" stroke-width="3"/>
+<rect x="430" y="110" width="165" height="44" rx="12" fill="#d97706" stroke="none" stroke-width="0"/>
+<rect x="430" y="140" width="165" height="14" rx="0" fill="#d97706" stroke="none" stroke-width="0"/>
+<text x="512.5" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">Ring buffer</text>
+<text x="512.5" y="196" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">2 KB, async</text>
+<text x="512.5" y="226" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">full → event lost</text>
+<line x1="599" y1="195" x2="619" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="625" y="110" width="165" height="170" rx="12" fill="#fff" stroke="#0d9488" stroke-width="3"/>
+<rect x="625" y="110" width="165" height="44" rx="12" fill="#0d9488" stroke="none" stroke-width="0"/>
+<rect x="625" y="140" width="165" height="14" rx="0" fill="#0d9488" stroke="none" stroke-width="0"/>
+<text x="707.5" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">Tracing thread</text>
+<text x="707.5" y="196" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">lowest priority</text>
+<text x="707.5" y="226" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">uart_poll_out()</text>
+<rect x="910" y="110" width="165" height="170" rx="12" fill="#fff" stroke="#16a34a" stroke-width="3"/>
+<rect x="910" y="110" width="165" height="44" rx="12" fill="#16a34a" stroke="none" stroke-width="0"/>
+<rect x="910" y="140" width="165" height="14" rx="0" fill="#16a34a" stroke="none" stroke-width="0"/>
+<text x="992.5" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">Capture</text>
+<text x="992.5" y="196" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">capture script</text>
+<text x="992.5" y="226" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">→ channel0_0</text>
+<line x1="1079" y1="195" x2="1079" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="1085" y="110" width="165" height="170" rx="12" fill="#fff" stroke="#16a34a" stroke-width="3"/>
+<rect x="1085" y="110" width="165" height="44" rx="12" fill="#16a34a" stroke="none" stroke-width="0"/>
+<rect x="1085" y="140" width="165" height="14" rx="0" fill="#16a34a" stroke="none" stroke-width="0"/>
+<text x="1167.5" y="140" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">Viewer</text>
+<text x="1167.5" y="196" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">trace_viewer.py</text>
+<text x="1167.5" y="226" text-anchor="middle" font-size="16" font-weight="400" fill="#0f172a">+ TSDL metadata</text>
+<line x1="795" y1="195" x2="902" y2="195" stroke="#2563eb" stroke-width="3" marker-end="url(#ar)"/>
+<text x="851" y="182" text-anchor="middle" font-size="16" font-weight="700" fill="#2563eb">USB</text>
+<text x="851" y="222" text-anchor="middle" font-size="16" font-weight="700" fill="#2563eb">jack</text>
+<text x="640" y="390" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">≈ 20 events and ≈ 0.5 KB per 1 ms tick: ≈ 0.5 MB/s leaves the board</text>
+</svg>

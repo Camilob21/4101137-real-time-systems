@@ -1,90 +1,102 @@
-# SOP-05 — Zephyr tracing on the node (SystemView / CTF)
+# SOP-05 — CTF tracing on the node, over the UART jack
 
 - **Serves:** [lab05_tracing.md](../lab05_tracing.md)
-- **Hardware:** ESP32-S3 DevKitC; Route A needs a SEGGER J-Link probe, Route B needs only the USB cable + a spare UART.
+- **Hardware:** ESP32-S3 DevKitC with **both** jacks plugged in, data cables. In the
+  traced build the jacks swap jobs: the trace leaves through the UART jack at
+  4 Mbaud, the console moves to the USB jack (the S3's built-in USB-Serial-JTAG).
+  The analyzer stays on GPIO4–7, 15, 17.
+- **Firmware:** [firmware/kernel/](../../firmware/kernel/) or your week-4 node, plus
+  its three tracing files: `trace.conf`, `uart_trace.overlay`, `ctf_sleep_events.tsdl`.
+- **Host:** [`trace_capture.py`](trace_capture.py), in this directory.
 
-Steps, checks, and troubleshooting only — the *why* lives in the lab.
+Steps, checks and troubleshooting only; the *why* is in the
+[week-5 deck](../presentations/05_tracing.md).
 
-> **Draft** — commands pending validation on course hardware.
-
-Both routes need named threads:
-
-```ini
-CONFIG_THREAD_NAME=y
-```
-
-## Route A — SystemView over RTT (J-Link probe)
-
-### A1. Enable it
-
-```ini
-CONFIG_TRACING=y
-CONFIG_SEGGER_SYSTEMVIEW=y
-CONFIG_USE_SEGGER_RTT=y
-CONFIG_SEGGER_SYSVIEW_RTT_BUFFER_SIZE=8192
-```
-
-Rebuild and flash the node as usual.
-
-### A2. Capture
-
-1. Wire the J-Link to the S3's JTAG pins (MTMS/MTDI/MTCK/MTDO + GND); power stays USB.
-2. Open **SEGGER SystemView** → Target → Start Recording; device `ESP32-S3`,
-   interface JTAG.
-
-**Verify:** the thread lanes appear with your thread names (`control`, `sampling`,
-`console`…), events streaming.
-
-## Route B — CTF over UART (no probe)
-
-### B1. Enable it
-
-```ini
-CONFIG_TRACING=y
-CONFIG_TRACING_CTF=y
-CONFIG_TRACING_BACKEND_UART=y
-```
-
-Point tracing at a UART that is **not** the console (second USB-UART adapter on two
-free pins), via a devicetree overlay:
-
-```dts
-/ {
-    chosen {
-        zephyr,tracing-uart = &uart1;
-    };
-};
-```
-
-### B2. Capture the raw stream
+## 1. Find your two ports
 
 ```bash
-# capture ~60 s of raw CTF bytes (adjust the tty)
-timeout 60 cat /dev/ttyUSB1 > channel0_0
+ls -l /dev/serial/by-id/
 ```
 
-### B3. Convert and view
+The USB jack is the line with `Espressif_USB_JTAG_serial_debug_unit`. The other
+line is the UART jack's bridge: `Silicon_Labs_CP2102N…` → `/dev/ttyUSB*`, or
+`1a86_USB_Single_Serial…` (CH343) → `/dev/ttyACM*`. The commands below call them
+`$USB` and `$UART`; set both once per terminal:
 
 ```bash
-sudo apt install babeltrace2 python3-bt2
-mkdir trace && cp channel0_0 trace/
+USB=/dev/serial/by-id/usb-Espressif_USB_JTAG_serial_debug_unit_<…>-if00
+UART=/dev/serial/by-id/usb-<your bridge>-if00
+```
+
+**Verify:** both paths exist (`ls $USB $UART`).
+
+## 2. Build and flash the traced node
+
+Copy the three tracing files into your app if it isn't `firmware/kernel`, then:
+
+```bash
+west build -p -b esp32s3_devkitc/esp32s3/procpu firmware/kernel -- \
+  -DEXTRA_CONF_FILE=trace.conf -DEXTRA_DTC_OVERLAY_FILE=uart_trace.overlay
+west flash --esp-device $UART
+```
+
+With the pot: `-DEXTRA_DTC_OVERLAY_FILE="pot_esp32s3.overlay;uart_trace.overlay"`.
+
+**Verify:** a terminal on the USB jack answers `status`:
+`python -m serial.tools.miniterm $USB 115200` (Ctrl-] quits).
+
+## 3. Capture
+
+```bash
+mkdir -p trace
+python labs/sops/trace_capture.py -d $UART -o trace/channel0_0     # Ctrl-C to stop
+```
+
+Do what you want to trace (type `calib` in the USB-jack terminal), wait 1–2 s, then
+Ctrl-C. The script prints the rate: 320–360 KiB/s, just under the 4 Mbaud link.
+
+**Verify:** the printed size grows with the capture time (≈ 0.35 MB per second).
+
+## 4. Metadata
+
+```bash
 cp $ZEPHYR_BASE/subsys/tracing/ctf/tsdl/metadata trace/
-babeltrace2 trace/ > trace.txt        # text timeline
+grep -q sleep_ticks trace/metadata || cat firmware/kernel/ctf_sleep_events.tsdl >> trace/metadata
 ```
 
-For a graphical timeline, open the `trace/` directory in **Eclipse TraceCompass**
-(File → Open Trace).
+The second line adds two `k_sleep` events the pinned Zephyr emits but doesn't
+describe; without them decoding stops at the first `k_msleep`.
 
-**Verify:** `trace.txt` shows `thread_switched_in` / `thread_switched_out` events
-with your thread names and monotonic timestamps.
+**Verify:** `grep -c sleep_ticks trace/metadata` prints a number above 0.
+
+## 5. View
+
+```bash
+python $ZEPHYR_BASE/scripts/tracing/trace_viewer.py --metadata trace/metadata trace/channel0_0
+python $ZEPHYR_BASE/scripts/tracing/trace_viewer.py --metadata trace/metadata --text trace/channel0_0 > trace.txt
+```
+
+The first opens a terminal timeline: arrow keys move, `v` toggles the raw event
+log. Add `-f` to follow a capture while it runs. For a graphical timeline, open the
+`trace/` directory in Eclipse TraceCompass (File → Open Trace).
+
+**Verify:** the lanes carry your thread names (`sampling_tid`, `control_tid`, …)
+and run past the first second; `trace.txt` shows `thread_switched_in` /
+`thread_switched_out` events with increasing timestamps.
+
+## 6. Tracing off, for the overhead row
+
+Flash the plain week-4 build (no `trace.conf`, no overlay; the console returns to
+the UART jack) and measure sampling jitter on the analyzer with the usual protocol.
 
 ## Troubleshooting
 
-| Symptom | Likely cause | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| SystemView connects but no events | RTT buffer overflow at high event rate | Increase `CONFIG_SEGGER_SYSVIEW_RTT_BUFFER_SIZE`; lower the event rate (`CONFIG_TRACING_ISR=n` if ISR events flood) |
-| Threads show as addresses, not names | `CONFIG_THREAD_NAME` missing | Add it and rebuild |
-| `babeltrace2` errors on the trace | Missing/mismatched `metadata`, or bytes lost on UART | Re-copy `metadata` from *your* Zephyr checkout; lower the trace UART baud; re-capture |
-| Garbage mixed into the CTF file | Tracing sharing the console UART | Use a separate UART (the overlay above); never trace over the console |
-| J-Link doesn't see the S3 | JTAG pins wrong or claimed by the app | Check MTMS=42, MTDI=41, MTCK=39, MTDO=40 on the DevKitC; free those pins in the overlay |
-| Trace timestamps look compressed/wrong | Timer frequency mismatch in viewer | In SystemView set the CPU frequency to the S3's actual clock (240 MHz default) |
+| `trace_capture.py` prints 0 bytes | Bridge can't do 4 Mbaud: CP2102N stops at 3 | Set `current-speed = <3000000>` in the overlay, rebuild, capture with `-b 3000000`; expect more drops |
+| Nothing decodes | A capture joined mid-event, e.g. Zephyr's `trace_capture_uart.py` reading bytes left in the bridge | Capture with `trace_capture.py`: it drains first |
+| No answer on the USB jack | Plain build flashed, or charge-only cable | The console is on the USB jack only in the traced build |
+| `Permission denied` on a port | User not in `dialout` | `sudo usermod -aG dialout $USER`, log out and in |
+| Lanes stop after a fraction of a second | Metadata without the sleep events | Step 4, second line |
+| Gaps while `calib` runs | The tracer drains at the lowest priority; a spinning console starves it and the buffer fills | Expected: it is the cost slide, live. Read the ticks before the gap |
+| Board resets when a tool opens the UART jack | That tool toggles DTR before RTS, which pulses EN | Use the tools above; they leave both lines alone |

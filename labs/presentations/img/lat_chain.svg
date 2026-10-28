@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1414 280" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<rect x="30.0" y="70.0" width="250.0" height="120.0" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="46.0" y="100.0" text-anchor="start" font-size="22" font-weight="700" fill="#2563eb">1</text>
+<text x="155.0" y="136.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">event → IRQ</text>
+<text x="155.0" y="168.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">input sync, cycles</text>
+<line x1="282.0" y1="125.0" x2="302.0" y2="125.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="306.0" y="70.0" width="250.0" height="120.0" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="322.0" y="100.0" text-anchor="start" font-size="22" font-weight="700" fill="#2563eb">2</text>
+<text x="431.0" y="136.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">IRQ latency</text>
+<text x="431.0" y="168.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">12 cycles, if unmasked</text>
+<line x1="558.0" y1="125.0" x2="578.0" y2="125.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="582.0" y="70.0" width="250.0" height="120.0" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="598.0" y="100.0" text-anchor="start" font-size="22" font-weight="700" fill="#2563eb">3</text>
+<text x="707.0" y="136.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">ISR body</text>
+<text x="707.0" y="168.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">capture + flag, µs</text>
+<line x1="834.0" y1="125.0" x2="854.0" y2="125.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="858.0" y="70.0" width="250.0" height="120.0" rx="12" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+<text x="874.0" y="100.0" text-anchor="start" font-size="22" font-weight="700" fill="#e11d48">4</text>
+<text x="983.0" y="136.0" text-anchor="middle" font-size="24" font-weight="700" fill="#e11d48">hand-off wait</text>
+<text x="983.0" y="168.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">the loop must come round</text>
+<line x1="1110.0" y1="125.0" x2="1130.0" y2="125.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="1134.0" y="70.0" width="250.0" height="120.0" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="1150.0" y="100.0" text-anchor="start" font-size="22" font-weight="700" fill="#2563eb">5</text>
+<text x="1259.0" y="136.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">service</text>
+<text x="1259.0" y="168.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">handler runs, valve moves</text>
+<text x="983.0" y="230.0" text-anchor="middle" font-size="22" font-weight="700" fill="#e11d48">bounded by the longest loop pass</text>
+<text x="983.0" y="260.0" text-anchor="middle" font-size="22" font-weight="400" fill="#e11d48">the villain</text>
+<text x="30.0" y="40.0" text-anchor="start" font-size="24" font-weight="700" fill="#475569">fixed delays add latency · variable delays add jitter</text>
+</svg>

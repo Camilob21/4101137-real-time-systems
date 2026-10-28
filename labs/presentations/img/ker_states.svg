@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<rect x="40.0" y="110.0" width="240.0" height="100.0" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="160.0" y="156.0" text-anchor="middle" font-size="28" font-weight="700" fill="#d97706">Ready</text>
+<text x="160.0" y="186.0" text-anchor="middle" font-size="24" font-weight="400" fill="#0f172a">wants the CPU</text>
+<rect x="560.0" y="110.0" width="240.0" height="100.0" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="680.0" y="156.0" text-anchor="middle" font-size="28" font-weight="700" fill="#16a34a">Running</text>
+<text x="680.0" y="186.0" text-anchor="middle" font-size="24" font-weight="400" fill="#0f172a">has the CPU</text>
+<rect x="300.0" y="340.0" width="240.0" height="100.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="420.0" y="386.0" text-anchor="middle" font-size="28" font-weight="700" fill="#2563eb">Blocked</text>
+<text x="420.0" y="416.0" text-anchor="middle" font-size="24" font-weight="400" fill="#0f172a">waits: costs no CPU</text>
+<line x1="280.0" y1="140.0" x2="560.0" y2="140.0" stroke="#0f172a" stroke-width="3" marker-end="url(#ar-ink)"/>
+<text x="420.0" y="128.0" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">highest priority Ready</text>
+<line x1="560.0" y1="182.0" x2="280.0" y2="182.0" stroke="#0f172a" stroke-width="3" marker-end="url(#ar-ink)"/>
+<text x="420.0" y="206.0" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">preempted</text>
+<line x1="640.0" y1="210.0" x2="500.0" y2="340.0" stroke="#0f172a" stroke-width="3" marker-end="url(#ar-ink)"/>
+<text x="590.0" y="300.0" text-anchor="start" font-size="18" font-weight="700" fill="#0f172a">k_msgq_get, k_sleep</text>
+<line x1="340.0" y1="340.0" x2="200.0" y2="210.0" stroke="#0f172a" stroke-width="3" marker-end="url(#ar-ink)"/>
+<text x="250.0" y="300.0" text-anchor="end" font-size="18" font-weight="700" fill="#0f172a">data, timeout</text>
+<rect x="860.0" y="110.0" width="300.0" height="140.0" rx="12" fill="#f8fafc" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1010.0" y="160.0" text-anchor="middle" font-size="22" font-weight="700" fill="#475569">the superloop</text>
+<text x="1010.0" y="192.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">has no Blocked state:</text>
+<text x="1010.0" y="222.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">it polls, always Running</text>
+<text x="600.0" y="50.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">the scheduler's one rule: the highest-priority Ready thread runs</text>
+</svg>

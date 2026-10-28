@@ -1,4 +1,5 @@
 # Week 4 — The full migration and the A/B
+> - **Talk:** [04_ipc](presentations/04_ipc.md)
 > - **Reading:** [READINGS.md](../READINGS.md), week 4
 > - **Module:** 2
 > - **Firmware:** your week-3 `firmware/superloop/` (S3 overlay + sampling thread) is the starting point. The A side of today's A/B is the *S3 superloop* column you measured in week 3.
@@ -22,14 +23,16 @@ kernel counterpart.
 
 ## What you'll measure
 
-| Measurement (S3) | S3 superloop (wk 3) | Kernel (today) |
-|---|---|---|
-| Max sampling jitter | (copy) | ____ µs |
-| Max sampling jitter with `calib` | (copy) | ____ µs |
-| Max control period with `calib` | (copy) | ____ ms |
-| ISR → thread latency (`lat_peak_us`) | — | ____ µs |
-| Visible context-switch gap (Task C) | — | ____ µs |
-| Control thread stack high-water mark | — | ____ bytes / ____ allocated |
+Hand in the prediction column before the lab.
+
+| Measurement (S3) | S3 superloop (wk 3) | Prediction, kernel | Kernel (today) |
+|---|---|---|---|
+| Max sampling jitter | (copy) | ____ µs | ____ µs |
+| Max sampling jitter with `calib` | (copy) | ____ µs | ____ µs |
+| Max control period with `calib` | (copy) | ____ ms | ____ ms |
+| ISR → thread latency (`lat_peak_us`) | — | ____ µs | ____ µs |
+| Visible context-switch gap (Task C) | — | ____ µs | ____ µs |
+| Control thread stack high-water mark | — | ____ bytes | ____ bytes / ____ allocated |
 
 ## Tasks
 

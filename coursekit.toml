@@ -1,0 +1,39 @@
+# Course config for the course kit (../course-kit/STANDARD.md).
+# Check: python3 ../course-kit/tools/coursekit.py lint
+
+[course]
+code = "4101137"
+name = "Real-Time Systems"
+language = "en"
+accent = "#0d9488"
+
+# First match wins: events are sessions without the lab structure.
+[types]
+event = ["labs/lab07_workshop.md", "labs/lab08_amp.md", "labs/lab11_kickoff.md"]
+lab = ["labs/lab[0-9][0-9]_*.md"]
+talk = ["labs/presentations/*.md"]
+sop = ["labs/sops/sop[0-9][0-9]_*.md"]
+
+[ignore]
+paths = ["templates/**"]
+
+[talk]
+minutes = 40
+
+# One color per recurring entity, for every figure and slide (theme/course.css: c1..c8).
+[palette]
+analyzer = "c1"
+sampling = "c2"
+telemetry = "c3"
+trace = "c4"
+control = "c5"
+console = "c6"
+display = "c7"
+isr = "c8"
+
+# Session number = "date · toolchain · hardware" of the last full run.
+[validated]
+"3" = "2026-10-21 · Zephyr 2f0bc11, SDK 1.0.1 · ESP32-S3 N16R8 (CH343 bridge), fx2lafw 8-ch analyzer"
+"4" = "2026-10-21 · Zephyr 2f0bc11, SDK 1.0.1 · ESP32-S3 N16R8 (CH343 bridge), fx2lafw 8-ch analyzer"
+"5" = "2026-10-21 · Zephyr 2f0bc11, SDK 1.0.1 · ESP32-S3 N16R8 (CH343 bridge), fx2lafw 8-ch analyzer"
+"6" = "2026-10-21 · Zephyr 2f0bc11, SDK 1.0.1 · ESP32-S3 N16R8 (CH343 bridge), fx2lafw 8-ch analyzer"

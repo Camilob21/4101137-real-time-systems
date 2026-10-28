@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 440" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<rect x="440.0" y="150.0" width="300.0" height="110.0" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="590.0" y="201.0" text-anchor="middle" font-size="30" font-weight="700" fill="#7c3aed">main.c</text>
+<text x="590.0" y="233.0" text-anchor="middle" font-size="26" font-weight="400" fill="#0f172a">0 lines changed</text>
+<rect x="20.0" y="40.0" width="380.0" height="100.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="210.0" y="86.0" text-anchor="middle" font-size="18" font-weight="700" fill="#2563eb">nucleo_l476rg.overlay</text>
+<text x="210.0" y="106.0" text-anchor="middle" font-size="14" font-weight="400" fill="#0f172a">&amp;gpiob 3, &amp;gpioa 8, LD2 …</text>
+<rect x="20.0" y="270.0" width="380.0" height="100.0" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="210.0" y="316.0" text-anchor="middle" font-size="18" font-weight="700" fill="#d97706">esp32s3_devkitc_…procpu.overlay</text>
+<text x="210.0" y="336.0" text-anchor="middle" font-size="14" font-weight="400" fill="#0f172a">&amp;gpio0 4…17, valve_out GPIO21</text>
+<rect x="800.0" y="40.0" width="300.0" height="100.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="950.0" y="86.0" text-anchor="middle" font-size="22" font-weight="700" fill="#2563eb">NUCLEO-L476RG</text>
+<text x="950.0" y="110.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">Cortex-M4, 80 MHz</text>
+<rect x="800.0" y="270.0" width="300.0" height="100.0" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="950.0" y="316.0" text-anchor="middle" font-size="22" font-weight="700" fill="#d97706">ESP32-S3</text>
+<text x="950.0" y="340.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">Xtensa LX7, 240 MHz</text>
+<line x1="390.0" y1="90.0" x2="800.0" y2="90.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<line x1="390.0" y1="320.0" x2="800.0" y2="320.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<line x1="590.0" y1="150.0" x2="620.0" y2="128.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<line x1="590.0" y1="260.0" x2="620.0" y2="282.0" stroke="#475569" stroke-width="2" marker-end="url(#ar-muted)"/>
+<text x="590.0" y="420.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">the port is data, not code: one overlay per board</text>
+</svg>

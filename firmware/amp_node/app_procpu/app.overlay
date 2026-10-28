@@ -1,0 +1,49 @@
+/*
+ * PROCPU's pins: everything except the hard path's (GPIO4, 5, 21), which belong to
+ * the APPCPU image. instr_ipm (GPIO18) rises when PROCPU learns of an e-stop.
+ */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/i2c/i2c.h>
+
+/ {
+	instr {
+		compatible = "gpio-leds";
+		instr_cons: instr_cons { gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>; };
+		instr_tele: instr_tele { gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>; };
+		instr_flow: instr_flow { gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>; };
+		instr_disp: instr_disp { gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>; };
+		instr_ipm: instr_ipm { gpios = <&gpio0 18 GPIO_ACTIVE_HIGH>; };
+	};
+
+	keys {
+		compatible = "gpio-keys";
+		flow_pulse: flow_pulse {
+			gpios = <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+		};
+	};
+};
+
+&ipm0 {
+	status = "okay";
+};
+
+/* Optional SSD1306 (build with -DEXTRA_CONF_FILE=display.conf), SDA GPIO1 / SCL GPIO2. */
+&i2c0 {
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+
+	ssd1306: ssd1306@3c {
+		compatible = "solomon,ssd1306";
+		reg = <0x3c>;
+		width = <128>;
+		height = <64>;
+		segment-offset = <0>;
+		page-offset = <0>;
+		display-offset = <0>;
+		multiplex-ratio = <63>;
+		prechargep = <0x22>;
+		segment-remap;
+		com-invdir;
+	};
+};

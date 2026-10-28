@@ -38,3 +38,8 @@ west build -p -b native_sim/native/64 firmware/kernel -- -DCONFIG_THREAD_ANALYZE
 
 Unlike the superloop, this one runs on `native_sim`: every thread blocks, so
 simulated time advances. The thread analyzer isn't available there.
+
+`trace.conf` and `uart_trace.overlay` stream a CTF trace out of the devkit's UART
+jack at 4 Mbaud and move the console to the USB jack; `ctf_sleep_events.tsdl` adds
+the two events Zephyr main's metadata is missing. The commands are in
+[SOP-05](../../labs/sops/sop05_tracing.md).

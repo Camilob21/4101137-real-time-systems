@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1130 470" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<line x1="110.0" y1="380.0" x2="1080.0" y2="380.0" stroke="#475569" stroke-width="2"/>
+<line x1="110.0" y1="380.0" x2="110.0" y2="60.0" stroke="#475569" stroke-width="2"/>
+<line x1="110.0" y1="380.0" x2="110.0" y2="388.0" stroke="#475569" stroke-width="2"/>
+<text x="110.0" y="412.0" text-anchor="middle" font-size="18" font-weight="400" fill="#475569">0</text>
+<line x1="304.0" y1="380.0" x2="304.0" y2="388.0" stroke="#475569" stroke-width="2"/>
+<text x="304.0" y="412.0" text-anchor="middle" font-size="18" font-weight="400" fill="#475569">20</text>
+<line x1="498.0" y1="380.0" x2="498.0" y2="388.0" stroke="#475569" stroke-width="2"/>
+<text x="498.0" y="412.0" text-anchor="middle" font-size="18" font-weight="400" fill="#475569">40</text>
+<line x1="692.0" y1="380.0" x2="692.0" y2="388.0" stroke="#475569" stroke-width="2"/>
+<text x="692.0" y="412.0" text-anchor="middle" font-size="18" font-weight="400" fill="#475569">60</text>
+<line x1="886.0" y1="380.0" x2="886.0" y2="388.0" stroke="#475569" stroke-width="2"/>
+<text x="886.0" y="412.0" text-anchor="middle" font-size="18" font-weight="400" fill="#475569">80</text>
+<line x1="1080.0" y1="380.0" x2="1080.0" y2="388.0" stroke="#475569" stroke-width="2"/>
+<text x="1080.0" y="412.0" text-anchor="middle" font-size="18" font-weight="400" fill="#475569">100</text>
+<line x1="102.0" y1="380.0" x2="110.0" y2="380.0" stroke="#475569" stroke-width="2"/>
+<text x="96.0" y="386.0" text-anchor="end" font-size="18" font-weight="400" fill="#475569">0.0</text>
+<line x1="102.0" y1="291.1" x2="110.0" y2="291.1" stroke="#475569" stroke-width="2"/>
+<text x="96.0" y="297.1" text-anchor="end" font-size="18" font-weight="400" fill="#475569">0.1</text>
+<line x1="102.0" y1="202.2" x2="110.0" y2="202.2" stroke="#475569" stroke-width="2"/>
+<text x="96.0" y="208.2" text-anchor="end" font-size="18" font-weight="400" fill="#475569">0.2</text>
+<line x1="102.0" y1="113.3" x2="110.0" y2="113.3" stroke="#475569" stroke-width="2"/>
+<text x="96.0" y="119.3" text-anchor="end" font-size="18" font-weight="400" fill="#475569">0.3</text>
+<text x="595.0" y="446.0" text-anchor="middle" font-size="20" font-weight="400" fill="#475569">hours since the battery was switched on</text>
+<text x="110.0" y="36.0" text-anchor="start" font-size="20" font-weight="400" fill="#475569">clock error (s)</text>
+<polyline points="110.0,380.0 1080.0,74.8" fill="none" stroke="#e11d48" stroke-width="4"/>
+<circle cx="110.0" cy="380.0" r="6" fill="#e11d48"/>
+<circle cx="119.7" cy="376.9" r="6" fill="#e11d48"/>
+<circle cx="187.6" cy="355.6" r="6" fill="#e11d48"/>
+<circle cx="304.0" cy="319.0" r="6" fill="#e11d48"/>
+<circle cx="575.6" cy="233.5" r="6" fill="#e11d48"/>
+<circle cx="808.4" cy="160.3" r="6" fill="#e11d48"/>
+<circle cx="1080.0" cy="74.8" r="6" fill="#e11d48"/>
+<text x="1066.0" y="56.8" text-anchor="end" font-size="22" font-weight="700" fill="#e11d48">Dhahran, ≈ 100 h: 0.34 s</text>
+<text x="1066.0" y="326.7" text-anchor="end" font-size="19" font-weight="400" fill="#0f172a">a Scud covers ≈ 1,676 m/s × 0.34 s:</text>
+<text x="1066.0" y="352.7" text-anchor="end" font-size="19" font-weight="700" fill="#0f172a">over half a kilometer</text>
+<text x="139.1" y="140.0" text-anchor="start" font-size="20" font-weight="700" fill="#0f172a">0.1 s in a 24-bit register:</text>
+<text x="139.1" y="168.0" text-anchor="start" font-size="20" font-weight="400" fill="#0f172a">0.000000095 s lost on every tick</text>
+</svg>

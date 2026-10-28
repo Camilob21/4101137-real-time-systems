@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1346 474" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<text x="250.0" y="44.0" text-anchor="start" font-size="24" font-weight="700" fill="#0f172a">k_sem used as a lock: no owner, no inheritance</text>
+<text x="236.0" y="88.0" text-anchor="end" font-size="22" font-weight="700" fill="#e11d48">H · control</text>
+<line x1="250.0" y1="94.0" x2="1066.0" y2="94.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="346.0" y="66.0" width="48.0" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<rect x="394.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="442.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="490.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="538.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="586.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="634.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="682.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="730.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="778.0" y="74.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="826.0" y="66.0" width="48.0" height="28.0" rx="0" fill="#e11d48" stroke="#e11d48" stroke-width="2"/>
+<rect x="874.0" y="66.0" width="48.0" height="28.0" rx="0" fill="#e11d48" stroke="#e11d48" stroke-width="2"/>
+<rect x="922.0" y="66.0" width="48.0" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="236.0" y="134.0" text-anchor="end" font-size="22" font-weight="700" fill="#16a34a">M · telemetry</text>
+<line x1="250.0" y1="140.0" x2="1066.0" y2="140.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="442.0" y="112.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="490.0" y="112.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="538.0" y="112.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="586.0" y="112.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="634.0" y="112.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="682.0" y="112.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="236.0" y="180.0" text-anchor="end" font-size="22" font-weight="700" fill="#7c3aed">L · console</text>
+<line x1="250.0" y1="186.0" x2="1066.0" y2="186.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="250.0" y="158.0" width="48.0" height="28.0" rx="0" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<rect x="298.0" y="158.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="394.0" y="158.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="730.0" y="158.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="778.0" y="158.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="970.0" y="158.0" width="48.0" height="28.0" rx="0" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<line x1="394.0" y1="206.0" x2="826.0" y2="206.0" stroke="#e11d48" stroke-width="3"/>
+<text x="836.0" y="213.0" text-anchor="start" font-size="21" font-weight="700" fill="#e11d48">H waits 9, finishes at t = 15</text>
+<text x="250.0" y="264.0" text-anchor="start" font-size="24" font-weight="700" fill="#0f172a">k_mutex: the holder inherits the waiter's priority</text>
+<text x="236.0" y="308.0" text-anchor="end" font-size="22" font-weight="700" fill="#e11d48">H · control</text>
+<line x1="250.0" y1="314.0" x2="1066.0" y2="314.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="346.0" y="286.0" width="48.0" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<rect x="394.0" y="294.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="442.0" y="294.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="490.0" y="294.0" width="48.0" height="12.0" rx="0" fill="#f1f5f9" stroke="#475569" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="538.0" y="286.0" width="48.0" height="28.0" rx="0" fill="#e11d48" stroke="#e11d48" stroke-width="2"/>
+<rect x="586.0" y="286.0" width="48.0" height="28.0" rx="0" fill="#e11d48" stroke="#e11d48" stroke-width="2"/>
+<rect x="634.0" y="286.0" width="48.0" height="28.0" rx="0" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="236.0" y="354.0" text-anchor="end" font-size="22" font-weight="700" fill="#16a34a">M · telemetry</text>
+<line x1="250.0" y1="360.0" x2="1066.0" y2="360.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="682.0" y="332.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="730.0" y="332.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="778.0" y="332.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="826.0" y="332.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="874.0" y="332.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<rect x="922.0" y="332.0" width="48.0" height="28.0" rx="0" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="236.0" y="400.0" text-anchor="end" font-size="22" font-weight="700" fill="#7c3aed">L · console</text>
+<line x1="250.0" y1="406.0" x2="1066.0" y2="406.0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="250.0" y="378.0" width="48.0" height="28.0" rx="0" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<rect x="298.0" y="378.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="394.0" y="378.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="442.0" y="378.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="490.0" y="378.0" width="48.0" height="28.0" rx="0" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+<rect x="970.0" y="378.0" width="48.0" height="28.0" rx="0" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<line x1="394.0" y1="426.0" x2="538.0" y2="426.0" stroke="#e11d48" stroke-width="3"/>
+<text x="548.0" y="433.0" text-anchor="start" font-size="21" font-weight="700" fill="#e11d48">H waits 3, finishes at t = 9</text>
+<text x="250.0" y="460.0" text-anchor="start" font-size="20" font-weight="400" fill="#475569">filled = holds the lock · dashed = blocked on it</text>
+</svg>

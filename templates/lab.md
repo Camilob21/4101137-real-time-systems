@@ -1,4 +1,5 @@
 # Week N — <Session title>
+> - **Talk:** [`NN_<slug>`](../labs/presentations/NN_<slug>.md)
 > - **Tech guide:** [SOP-NN](sop.md) *(delete this line if the session has no SOP)*
 > - **Reading:** [READINGS.md](../READINGS.md), week N
 > - **Module:** M
@@ -14,11 +15,11 @@
 
 ## What you'll measure
 
-<The table this session must fill in — columns defined, cells empty:>
+Hand in the prediction column before the lab.
 
-| Measurement | Your value | Target | Note |
+| Measurement | Prediction | Your value | Target |
 |---|---|---|---|
-| <e.g. loop p99 jitter> | ____ µs | < ___ µs | `<condition>` |
+| <e.g. loop p99 jitter, `<condition>`> | ____ µs | ____ µs | < ___ µs |
 
 ## Tasks
 

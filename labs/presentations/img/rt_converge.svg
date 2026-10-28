@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 400" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<rect x="30.0" y="30.0" width="400.0" height="90.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="230.0" y="71.0" text-anchor="middle" font-size="22" font-weight="700" fill="#2563eb">Digital systems</text>
+<text x="230.0" y="95.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">setup/hold: late = wrong value</text>
+<line x1="440.0" y1="75.0" x2="640.0" y2="205.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="30.0" y="150.0" width="400.0" height="90.0" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="230.0" y="191.0" text-anchor="middle" font-size="22" font-weight="700" fill="#7c3aed">Computation structures</text>
+<text x="230.0" y="215.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">registers, IRQs, superloops</text>
+<line x1="440.0" y1="195.0" x2="640.0" y2="205.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="30.0" y="270.0" width="400.0" height="90.0" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="230.0" y="311.0" text-anchor="middle" font-size="22" font-weight="700" fill="#16a34a">Control systems</text>
+<text x="230.0" y="335.0" text-anchor="middle" font-size="18" font-weight="400" fill="#0f172a">the loop assumes a constant T</text>
+<line x1="440.0" y1="315.0" x2="640.0" y2="205.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="650.0" y="150.0" width="220.0" height="110.0" rx="55" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+<text x="760.0" y="220.0" text-anchor="middle" font-size="40" font-weight="700" fill="#e11d48">when</text>
+<line x1="880.0" y1="205.0" x2="960.0" y2="205.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<text x="975.0" y="196.0" text-anchor="start" font-size="22" font-weight="400" fill="#0f172a">this course:</text>
+<text x="975.0" y="228.0" text-anchor="start" font-size="22" font-weight="700" fill="#0f172a">make “when” a guarantee</text>
+</svg>

@@ -1,0 +1,8 @@
+config APP_HARD_PATH_IRAM
+	bool "Run the hard path from internal RAM"
+	help
+	  Places the sampling and control path in IRAM and writes its pins
+	  through the GPIO registers, so it never fetches from the flash cache
+	  that both cores share.
+
+source "Kconfig.zephyr"

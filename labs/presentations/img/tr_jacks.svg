@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 530" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f1f5f9"/><line x1="0" y1="0" x2="0" y2="8" stroke="#94a3b8" stroke-width="3"/></pattern></defs>
+<rect x="470" y="70" width="340" height="230" rx="14" fill="#1e293b" stroke="none" stroke-width="0"/>
+<text x="640" y="175" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">ESP32-S3-DevKitC-1</text>
+<text x="640" y="205" text-anchor="middle" font-size="17" font-weight="400" fill="#cbd5e1">firmware/kernel + trace</text>
+<circle cx="490" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="510" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="530" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="550" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="570" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="590" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="610" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="630" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="650" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="670" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="690" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="710" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="730" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="750" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="770" cy="90" r="5" fill="#fbbf24"/>
+<circle cx="790" cy="90" r="5" fill="#fbbf24"/>
+<rect x="520" y="288" width="70" height="26" rx="6" fill="#94a3b8" stroke="none" stroke-width="0"/>
+<text x="555" y="278" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">UART</text>
+<rect x="690" y="288" width="70" height="26" rx="6" fill="#94a3b8" stroke="none" stroke-width="0"/>
+<text x="725" y="278" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">USB</text>
+<path d="M555 314 C555 400, 330 380, 330 420" fill="none" stroke="#2563eb" stroke-width="5"/>
+<rect x="140" y="420" width="380" height="90" rx="12" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+<text x="330" y="455" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">Trace · CTF at 4 Mbaud</text>
+<text x="330" y="488" text-anchor="middle" font-size="17" font-weight="400" fill="#0f172a">labs/sops/trace_capture.py</text>
+<path d="M725 314 C725 400, 950 380, 950 420" fill="none" stroke="#16a34a" stroke-width="5"/>
+<rect x="760" y="420" width="380" height="90" rx="12" fill="#fff" stroke="#16a34a" stroke-width="3"/>
+<text x="950" y="455" text-anchor="middle" font-size="20" font-weight="700" fill="#16a34a">Console · USB-Serial-JTAG</text>
+<text x="950" y="488" text-anchor="middle" font-size="17" font-weight="400" fill="#0f172a">status, calib, set</text>
+<path d="M640 84 C640 40, 980 60, 1000 110" fill="none" stroke="#ea580c" stroke-width="5"/>
+<rect x="900" y="110" width="340" height="90" rx="12" fill="#fff" stroke="#ea580c" stroke-width="3"/>
+<text x="1070" y="145" text-anchor="middle" font-size="20" font-weight="700" fill="#ea580c">Analyzer · GPIO4–7, 15, 17</text>
+<text x="1070" y="178" text-anchor="middle" font-size="17" font-weight="400" fill="#0f172a">the numbers, unperturbed</text>
+<text x="120" y="150" text-anchor="start" font-size="19" font-weight="400" fill="#475569">Two USB-C cables:</text>
+<text x="120" y="180" text-anchor="start" font-size="19" font-weight="400" fill="#475569">one per job.</text>
+</svg>

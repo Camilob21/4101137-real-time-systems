@@ -1,4 +1,5 @@
 # Week 3 — The S3 port and the first thread
+> - **Talk:** [03_scheduler](presentations/03_scheduler.md)
 > - **Reading:** [READINGS.md](../READINGS.md), week 3
 > - **Module:** 2
 > - **Firmware:** your week-2 `firmware/superloop/` (TASKs 1–3 filled in). Commit it before you start: today's first piece of evidence is a diff.
@@ -17,13 +18,15 @@ first thread."*
 
 ## What you'll measure
 
-| Measurement | L476RG (wk 2) | S3 superloop | S3 + sampling thread |
-|---|---|---|---|
-| Max sampling jitter, ≥ 30 s | (copy) | ____ µs | ____ µs |
-| Max sampling jitter, `calib` active | (copy) | ____ µs | ____ µs |
-| `backlog_peak`, `calib` active | (copy) | ____ ticks | ____ ticks |
-| `lat_peak_us` (tick → thread start, firmware's own count) | — | — | ____ µs |
-| Max control period (`instr_ctrl`), `calib` active | — | ____ ms | ____ ms |
+Hand in the prediction column before the lab.
+
+| Measurement | L476RG (wk 2) | Prediction, S3 superloop | S3 superloop | S3 + sampling thread |
+|---|---|---|---|---|
+| Max sampling jitter, ≥ 30 s | (copy) | ____ µs | ____ µs | ____ µs |
+| Max sampling jitter, `calib` active | (copy) | ____ µs | ____ µs | ____ µs |
+| `backlog_peak`, `calib` active | (copy) | ____ ticks | ____ ticks | ____ ticks |
+| `lat_peak_us` (tick → thread start, firmware's own count) | — | | — | ____ µs |
+| Max control period (`instr_ctrl`), `calib` active | — | ____ ms | ____ ms | ____ ms |
 
 ## Tasks
 
@@ -155,7 +158,7 @@ not to skip.
 - Fill in the last column. Does `calib` still ruin sampling? And control?
 - `pressure_mv`, `estop` and `setpoint_mv` are now written in one thread and read
   in another. Name who writes and who reads each one, and say in one sentence why
-  today's code gets away with it. Week 7 answers it properly.
+  today's code gets away with it. Week 6 answers it properly.
 - **Evidence:** capture with `calib` active, sampling and control on the same
   screen + the filled column.
 

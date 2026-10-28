@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 450" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<text x="290.0" y="36.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Global: one queue, any core</text>
+<text x="910.0" y="36.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Partitioned: one queue per core</text>
+<rect x="130.0" y="70.0" width="320.0" height="70.0" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="290.0" y="113.0" text-anchor="middle" font-size="22" font-weight="700" fill="#d97706">ready queue: τ1 τ2 τ3 τ4</text>
+<rect x="80.0" y="230.0" width="180.0" height="80.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="170.0" y="278.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">CPU 0</text>
+<line x1="290.0" y1="140.0" x2="170.0" y2="230.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="320.0" y="230.0" width="180.0" height="80.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="410.0" y="278.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">CPU 1</text>
+<line x1="290.0" y1="140.0" x2="410.0" y2="230.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<text x="290.0" y="360.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">tasks migrate: best average use,</text>
+<text x="290.0" y="388.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">per-core analysis no longer holds</text>
+<text x="290.0" y="426.0" text-anchor="middle" font-size="20" font-weight="700" fill="#475569">ESP-IDF on the S3</text>
+<rect x="690.0" y="70.0" width="200.0" height="70.0" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="790.0" y="113.0" text-anchor="middle" font-size="21" font-weight="700" fill="#d97706">node + load</text>
+<rect x="700.0" y="230.0" width="180.0" height="80.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="790.0" y="278.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">PROCPU</text>
+<line x1="790.0" y1="140.0" x2="790.0" y2="230.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<rect x="950.0" y="70.0" width="200.0" height="70.0" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="1050.0" y="113.0" text-anchor="middle" font-size="21" font-weight="700" fill="#e11d48">hard loop alone</text>
+<rect x="960.0" y="230.0" width="180.0" height="80.0" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="1050.0" y="278.0" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">APPCPU</text>
+<line x1="1050.0" y1="140.0" x2="1050.0" y2="230.0" stroke="#475569" stroke-width="3" marker-end="url(#ar-muted)"/>
+<line x1="620.0" y1="60.0" x2="620.0" y2="440.0" stroke="#cbd5e1" stroke-width="2"/>
+<text x="910.0" y="360.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">each core analyzed alone:</text>
+<text x="910.0" y="388.0" text-anchor="middle" font-size="20" font-weight="400" fill="#0f172a">week 6 holds, core by core</text>
+<text x="910.0" y="426.0" text-anchor="middle" font-size="20" font-weight="700" fill="#475569">Zephyr AMP on the S3: one image per core</text>
+</svg>

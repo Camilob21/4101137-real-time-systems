@@ -1,0 +1,21 @@
+# The course's Zephyr workspace, pinned for the semester (setup: labs/setup.md).
+# Bump `revision` between semesters, after the firmware builds and runs on it.
+manifest:
+  self:
+    path: 4101137-real-time-systems
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: 2f0bc11264a8e72e214f3db0a3fa221eb022453a  # main, 2026-09-01 (SDK 1.0.1)
+      import:
+        name-allowlist:
+          - cmsis
+          - cmsis_6
+          - hal_espressif
+          - hal_stm32
+          - picolibc

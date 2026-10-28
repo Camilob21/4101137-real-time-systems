@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 410" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif">
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/></marker><marker id="ar-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker><marker id="ar-c1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ea580c"/></marker><marker id="ar-c2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker><marker id="ar-c3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#16a34a"/></marker><marker id="ar-c4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#0d9488"/></marker><marker id="ar-c5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#e11d48"/></marker><marker id="ar-c6" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7c3aed"/></marker><marker id="ar-c7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#d97706"/></marker><marker id="ar-c8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#db2777"/></marker></defs>
+<text x="20.0" y="80.0" text-anchor="start" font-size="26" font-weight="700" fill="#0f172a">EDF</text>
+<rect x="80.0" y="40" width="1000.0" height="60" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="580.0" y="79.0" text-anchor="middle" font-size="22" font-weight="700" fill="#16a34a">guaranteed: U ≤ 1 is exact</text>
+<rect x="1080.0" y="40" width="100.0" height="60" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="1130.0" y="79.0" text-anchor="middle" font-size="18" font-weight="700" fill="#e11d48">overload</text>
+<text x="20.0" y="190.0" text-anchor="start" font-size="26" font-weight="700" fill="#0f172a">RM</text>
+<rect x="80.0" y="150" width="693.1471805599452" height="60" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="426.6" y="189.0" text-anchor="middle" font-size="22" font-weight="700" fill="#16a34a">guaranteed, any n</text>
+<rect x="773.1471805599452" y="150" width="306.85281944005476" height="60" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="926.6" y="189.0" text-anchor="middle" font-size="22" font-weight="700" fill="#d97706">maybe: run RTA</text>
+<rect x="1080.0" y="150" width="100.0" height="60" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+<text x="1130.0" y="189.0" text-anchor="middle" font-size="18" font-weight="700" fill="#e11d48">overload</text>
+<line x1="80" y1="270" x2="1180" y2="270" stroke="#475569" stroke-width="2"/>
+<line x1="80.0" y1="264" x2="80.0" y2="276" stroke="#475569" stroke-width="2"/>
+<text x="80.0" y="300.0" text-anchor="middle" font-size="20" font-weight="400" fill="#475569">0.0</text>
+<line x1="280.0" y1="264" x2="280.0" y2="276" stroke="#475569" stroke-width="2"/>
+<text x="280.0" y="300.0" text-anchor="middle" font-size="20" font-weight="400" fill="#475569">0.2</text>
+<line x1="479.99999999999994" y1="264" x2="479.99999999999994" y2="276" stroke="#475569" stroke-width="2"/>
+<text x="480.0" y="300.0" text-anchor="middle" font-size="20" font-weight="400" fill="#475569">0.4</text>
+<line x1="680.0" y1="264" x2="680.0" y2="276" stroke="#475569" stroke-width="2"/>
+<text x="680.0" y="300.0" text-anchor="middle" font-size="20" font-weight="400" fill="#475569">0.6</text>
+<line x1="879.9999999999999" y1="264" x2="879.9999999999999" y2="276" stroke="#475569" stroke-width="2"/>
+<text x="880.0" y="300.0" text-anchor="middle" font-size="20" font-weight="400" fill="#475569">0.8</text>
+<line x1="1080.0" y1="264" x2="1080.0" y2="276" stroke="#475569" stroke-width="2"/>
+<text x="1080.0" y="300.0" text-anchor="middle" font-size="20" font-weight="400" fill="#475569">1.0</text>
+<line x1="773.1471805599452" y1="216" x2="773.1471805599452" y2="314" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="781.1" y="336.0" text-anchor="end" font-size="21" font-weight="700" fill="#0f172a">ln 2 ≈ 0.69 (n → ∞)</text>
+<line x1="908.4271247461902" y1="216" x2="908.4271247461902" y2="344" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="908.4" y="366.0" text-anchor="middle" font-size="21" font-weight="700" fill="#0f172a">n = 2: 0.83</text>
+<line x1="1051.4285714285716" y1="216" x2="1051.4285714285716" y2="374" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1051.4" y="396.0" text-anchor="middle" font-size="21" font-weight="700" fill="#0f172a">Fig. 4.13: 0.97</text>
+<text x="1180.0" y="300.0" text-anchor="end" font-size="22" font-weight="700" fill="#475569">U</text>
+</svg>

@@ -1,0 +1,22 @@
+
+/*
+ * Append to $ZEPHYR_BASE/subsys/tracing/ctf/tsdl/metadata. Zephyr main emits
+ * these two since a672a717cae (2026-08-20) but its metadata does not describe
+ * them, so readers lose sync at the first k_sleep().
+ */
+event {
+	name = thread_sleep_ticks_enter;
+	id = 0x184;
+	fields := struct {
+		uint32_t timeout;
+	};
+};
+
+event {
+	name = thread_sleep_ticks_exit;
+	id = 0x185;
+	fields := struct {
+		uint32_t timeout;
+		int32_t ret;
+	};
+};
