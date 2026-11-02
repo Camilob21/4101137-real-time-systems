@@ -1,0 +1,17 @@
+/*
+ * Lab 1 (STR): el ESP32-S3-DevKitC no trae un LED simple (el suyo es RGB direccionable).
+ * Se describe un LED externo en GPIO21 con el alias led0 que usa blinky.
+ * Mismo pin que la "valvula" del curso desde la semana 3.
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+    aliases {
+        led0 = &valve_out;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        valve_out: valve_out { gpios = <&gpio0 21 GPIO_ACTIVE_HIGH>; };
+    };
+};
