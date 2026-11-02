@@ -87,14 +87,11 @@ K_MSGQ_DEFINE(tick_q, sizeof(uint32_t), 8, 4);
 static atomic_t backlog_peak; /* worst backlog seen — `status` reports it */
 static atomic_t lat_peak_us;  /* worst release -> thread start */
 static atomic_t control_pending;
+static atomic_t ticks_pending;
 
 static void tick_isr(struct k_timer *t)
 {
-	uint32_t released = k_cycle_get_32();
-
-	k_msgq_put(&tick_q, &released, K_NO_WAIT);
-
-	atomic_val_t backlog = k_msgq_num_used_get(&tick_q);
+	atomic_val_t backlog = atomic_inc(&ticks_pending) + 1;
 
 	if (backlog > atomic_get(&backlog_peak)) {
 		atomic_set(&backlog_peak, backlog);
@@ -528,16 +525,22 @@ int main(void)
 	/* TASK 3 — paste from the lab guide. This is the superloop itself. */
 	
 
-while (1) {
-        task_console();
-        task_display();
-        task_telemetry();
+	int control_div = 0;
 
-        if (atomic_get(&control_pending) > 0) {
-			atomic_dec(&control_pending);
-			task_control();
+	while (1) {
+		task_console();
+		task_display();
+		task_telemetry();
+
+		if (atomic_get(&ticks_pending) > 0) {
+			atomic_dec(&ticks_pending);
+			task_sampling();
+			if (++control_div >= CONTROL_EVERY) {
+				control_div = 0;
+				task_control();
+			}
 		}
 
-        task_flow_batch();
-}
+		task_flow_batch();
+	}
 }
