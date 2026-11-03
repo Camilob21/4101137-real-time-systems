@@ -1,17 +1,16 @@
 /*
- * ESP32-S3-DevKitC-1 pin map. Only hardware description changes; the C does not.
+ * ESP32-S3-DevKitC-1 pin map (Lab 3, Task A). Port = this file; the C does not change.
+ * Started from nucleo_l476rg.overlay; pins from firmware/superloop/README.md.
  *
- * The six instrumentation pins sit together on the header so an 8-channel
- * analyzer ribbon clips on in one go.
- *
- * Pressure comes from the synthetic plant until the pot is wired: build with
- * -DEXTRA_DTC_OVERLAY_FILE=pot_esp32s3.overlay to read it from ADC1 instead.
+ * Instrumentation: GPIO4,5,6,7,15,17 (header J1, consecutive with GPIO16).
+ * Valve (led0): GPIO21. Flow input: GPIO16. Console: uart0 on the UART jack.
  */
 
 #include <zephyr/dt-bindings/gpio/gpio.h>
 #include <zephyr/dt-bindings/i2c/i2c.h>
 
 / {
+	/* The devkit has no plain LED: the valve gets its own gpio-leds node. */
 	aliases {
 		led0 = &valve_out;
 	};
@@ -39,8 +38,8 @@
 	};
 };
 
-/* Optional SSD1306 HMI (build with -DEXTRA_CONF_FILE=display.conf).
- * The board routes i2c0 to SDA GPIO1 / SCL GPIO2. */
+/* Optional SSD1306 HMI (only with -DEXTRA_CONF_FILE=display.conf, not used today).
+ * The S3 board leaves i2c0 off: SDA GPIO1 / SCL GPIO2. */
 &i2c0 {
 	status = "okay";
 	clock-frequency = <I2C_BITRATE_FAST>;
