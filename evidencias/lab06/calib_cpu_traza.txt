@@ -1,0 +1,7 @@
+link losses: 62 gap(s), 11961 of 3678998 bytes skipped (0.33 %); decoding resumed after each
+trace span: 9362.8 ms, 158534 events, console spans: 2252
+thread(s): console_tid
+console running spans: 2252 in total; calib found from t = 4901.3 ms to 5448.5 ms (547.2 ms), 567 settles kept of 1000
+  CPU per settle: mean 64.56 us, median 13.33 us, p90 13.63 us, max 19898.48 us
+  console CPU in the kept settles: 36.608 ms
+calib CPU estimate = median span x 1000 = 13.329 ms

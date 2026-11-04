@@ -1,0 +1,22 @@
+/*
+ * Week 5 tracing: the CTF stream leaves through the UART jack and the console moves
+ * to the USB jack. The USB jack is the S3's USB-Serial-JTAG, whose driver sends one
+ * byte per USB packet: about 60 KiB/s, an eighth of what this node's trace needs.
+ */
+
+/ {
+	chosen {
+		zephyr,console = &usb_serial;
+		zephyr,shell-uart = &usb_serial;
+		zephyr,tracing-uart = &uart0;
+	};
+};
+
+&usb_serial {
+	status = "okay";
+};
+
+/* 80 MHz / 20. A CP2102N bridge (the UART jack shows as /dev/ttyUSB*) stops at 3000000. */
+&uart0 {
+	current-speed = <4000000>;
+};

@@ -1,0 +1,54 @@
+
+=== Fig. 4.13 (book check, ms) ===
+task            C us      T us      D us     U_i    B us     R us  R<=D  iterations
+tau1               2         5         5  0.4000       0        2  yes   2 -> 2
+tau2               4         7         7  0.5714       0        8  NO    4 -> 6 -> 8
+U = 0.9714   n = 2
+Liu & Layland: U <= n(2^(1/n)-1) = 0.8284  -> inconclusive
+Hyperbolic:    prod(U_i+1) = 2.2000 <= 2  -> inconclusive
+EDF (exact):   U <= 1  -> schedulable
+RTA verdict (no blocking): some task misses
+
+=== Node as measured, no lock contention ===
+task            C us      T us      D us     U_i    B us     R us  R<=D  iterations
+sampling        1.02      1000      1000  0.0010       0     1.02  yes   1.02 -> 1.02
+control        1.063     10000     10000  0.0001       0    2.083  yes   1.063 -> 2.083 -> 2.083
+telemetry      72.28   1000000   1000000  0.0001       0   74.363  yes   72.28 -> 74.363 -> 74.363
+U = 0.0012   n = 3
+Liu & Layland: U <= n(2^(1/n)-1) = 0.7798  -> PASS (RM guaranteed)
+Hyperbolic:    prod(U_i+1) = 1.0012 <= 2  -> PASS (RM guaranteed)
+EDF (exact):   U <= 1  -> schedulable
+RTA verdict (no blocking): every task meets R <= D
+
+=== Node with the PI mutex (B from Task B) ===
+task            C us      T us      D us     U_i    B us     R us  R<=D  iterations
+sampling        1.02      1000      1000  0.0010       0     1.02  yes   1.02 -> 1.02
+control        1.063     10000     10000  0.0001    4000 4006.163  yes   4001.063 -> 4006.163 -> 4006.163
+telemetry      72.28   1000000   1000000  0.0001    4000 4078.443  yes   4072.28 -> 4078.443 -> 4078.443
+U = 0.0012   n = 3
+Liu & Layland: U <= n(2^(1/n)-1) = 0.7798  -> PASS (RM guaranteed)
+Hyperbolic:    prod(U_i+1) = 1.0012 <= 2  -> PASS (RM guaranteed)
+EDF (exact):   U <= 1  -> schedulable
+RTA verdict (with B = 4000 us): every task meets R <= D
+
+=== Node + Daniela's two sensors, PI mutex ===
+task            C us      T us      D us     U_i    B us     R us  R<=D  iterations
+sampling        1.02      1000      1000  0.0010       0     1.02  yes   1.02 -> 1.02
+sensor_A        2000      5000      5000  0.4000       0  2003.06  yes   2000 -> 2002.04 -> 2003.06 -> 2003.06
+control        1.063     10000     10000  0.0001    4000 8010.243  yes   4001.063 -> 6006.1630000000005 -> 8008.2029999999995 -> 8010.243 -> 8010.243
+sensor_B        3200     10000     10000  0.3200    400011209.223  NO    7200 -> 11209.223
+telemetry      72.28   1000000   1000000  0.0001    400018493.786  yes   4072.28 -> 9278.443 -> 11283.543 -> 16486.646 -> 18491.746 -> 18493.786 -> 18493.786
+U = 0.7212   n = 5
+Liu & Layland: U <= n(2^(1/n)-1) = 0.7435  -> PASS (RM guaranteed)
+Hyperbolic:    prod(U_i+1) = 1.8502 <= 2  -> PASS (RM guaranteed)
+EDF (exact):   U <= 1  -> schedulable
+RTA verdict (with B = 4000 us): some task misses
+
+=== Task C: does calib fit? (REQ-CONS-01) ===
+U of the tasks above the console = 0.7212  -> they leave 278.8 ms of every 1000 ms
+before ADR-005: needs 395.1 ms of CPU -> DOES NOT fit
+after  ADR-005: needs 13.3 ms of CPU -> fits
+
+=== Task C: e-stop path, worst case (REQ-ESTOP-01, 5 ms) ===
+before: detect <= T_samp (1000) + wait control <= T_ctrl (10000) + C_ctrl (1.063) + next PWM step <= T_samp (1000) + C_samp (1.02) = 12002.083 us -> MISSES 5 ms
+after:  detect <= T_samp (1000) + C_samp (1.02) = 1001.02 us -> meets 5 ms
