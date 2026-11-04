@@ -1,0 +1,62 @@
+
+=== RESUMEN (trace/normal/channel0_0) ===
+  bytes leidos 1.06 MB -> eventos validos 45967, duracion 2999.4 ms
+  resincronizaciones (bytes perdidos/corruptos en el enlace UART): 6  (214 bytes descartados)
+     ids que no existen en el metadata donde se perdio la sincronia: 0x4 x1, 0x10 x1, 0x0 x1, 0x6e2e x1, 0x8acf x1, 0xea x1
+     p.ej. en t = 553.454 ms
+     p.ej. en t = 1335.486 ms
+     p.ej. en t = 1336.441 ms
+  traza reparada (abrela con el visor): trace/normal/channel0_0_reparada
+  thread_switched_in  : 4549
+  thread_switched_out : 7663  (faltan switched_in: el tracer no se traza a si mismo)
+     console_tid      in=588    out=588
+     control_tid      in=299    out=300
+     display_tid      in=58     out=58
+     idle             in=592    out=593
+     sampling_tid     in=2995   out=2994
+     telemetry_tid    in=17     out=17
+     tracing_thread   in=0      out=3113
+  hilos con nombre    : console_tid, control_tid, display_tid, idle, sampling_tid, telemetry_tid, tracing_thread
+  huecos > 2 ms sin eventos (buffer lleno -> eventos perdidos): 1
+     de t= 2402.467 ms a t= 2405.480 ms  (3.0 ms)
+
+(No hay ticks que expropien a la consola: esta captura no tiene calib.)
+
+=== UN 10.o TICK: k_sem_give -> control (Task B) ===
+  (indice #231 en el visor sobre la traza reparada: tecla v = log; o en trace/normal/eventos.txt)
+  t=   15.4336 ms   +   0.00 us   1 isr_enter (tick 1 kHz)
+  t=   15.4412 ms   +   7.56 us   2 thread_sched_ready(sampling)  <- k_msgq_put de la ISR
+  t=   15.4486 ms   +  14.98 us   4a thread_switched_out(idle)  -> queda READY
+  t=   15.4534 ms   +  19.82 us   4b thread_switched_in(sampling)
+  t=   15.4571 ms   +  23.50 us   5 GPIO4 sube (instr_samp)
+  t=   15.4681 ms   +  34.52 us     GPIO4 baja
+  t=   15.4734 ms   +  39.81 us     semaphore_give (k_sem_give a control)
+  t=   15.4775 ms   +  43.94 us     thread_sched_ready(control)
+  t=   15.4870 ms   +  53.40 us   6 thread_sched_pend(sampling)  <- k_msgq_get bloquea
+  t=   15.4919 ms   +  58.30 us   7a thread_switched_out(sampling)
+  t=   15.4982 ms   +  64.60 us   7b thread_switched_in(control_tid)
+  t=   15.5042 ms   +  70.62 us     GPIO5 sube (instr_ctrl)
+
+=== ESTADISTICAS (todos los ticks completos de la captura) ===
+  ticks reconstruidos: 2722  (dentro de calib: 0, 10.os ticks: 298); descartados por eventos perdidos: 274
+  ISR tick -> switched_in(sampling)              n=2722   min=  19.35  mediana=  20.14  p99=  31.62  max=  38.11  [us]
+  ISR tick -> GPIO4 sube (inicio de muestreo)    n=2722   min=  22.93  mediana=  23.74  p99=  35.28  max=  41.80  [us]
+  cambio de contexto: out(X) -> in(sampling)     n=2722   min=   4.69  mediana=   4.83  p99=   4.91  max=   5.86  [us]
+  cambio de contexto: out(sampling) -> in(sig.)  n=594    min=   4.81  mediana=   6.14  p99=   6.43  max=   6.47  [us]
+  10.o tick: pend(sampling) -> in(control)       n=298    min=  10.87  mediana=  11.11  p99=  11.35  max=  11.38  [us]
+  10.o tick: GPIO4 baja -> GPIO5 sube (=Lab 4)   n=298    min=  34.89  mediana=  35.75  p99=  36.37  max=  36.40  [us]
+  ancho de pulso instr_samp (GPIO4)              n=2722   min=  10.45  mediana=  10.89  p99=  11.08  max=  13.01  [us]
+
+=== CARGA DE CPU POR HILO, ventana 150.0 -> 2849.5 ms (2699.5 ms) ===
+  tracing_thread         78.53 %
+  idle                    9.24 %
+  sin identificar         8.20 %
+  sampling_tid            3.06 %
+  telemetry_tid           0.40 %
+  control_tid             0.29 %
+  console_tid             0.25 %
+  display_tid             0.02 %
+  SUMA                  100.00 %   (las ISR cuentan dentro del hilo interrumpido; 'sin identificar' = el tracer cuando faltan su in y su out)
+
+Listo. Todos los eventos quedaron en: /home/camilo12/4101137-real-time-systems/trace/normal/eventos.txt
+
